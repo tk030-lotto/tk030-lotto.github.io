@@ -162,7 +162,7 @@ zero-dev/ (または tk030-lotto.github.io)
 注意:
 - `tools/index.html` と `sitemap.xml` は、スクリプトで生成するため、直接編集しない。
 - `index.html`（HOME）は手動で編集してよいが、`TOOLS_COUNT` の目印コメントは消さない。
-- フッターは次の内容を基本とする: `© 2026 Zero Dev`、GitHub、note、My Tools、GitHub Sponsors（登録後）、プライバシーポリシー、免責事項。
+- フッターは次の内容を基本とする: `© 2026 Zero Dev`、GitHub、note、My Tools、プライバシーポリシー、免責事項。
 
 ## 6. ローカル確認方法
 
