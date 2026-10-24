@@ -1,0 +1,15 @@
+
+# 内部運用ファイル（共通ルール）
+AI_RULES.md
+SKILLS.md
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.cursorrules
+.clauderules
+.clinerules
+.roorules
+.github/copilot-instructions.md
+.agents/
+knowledge/
+RECORD.md
