@@ -3,11 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
   <title>Zero Dev</title>
+  <meta name="description" content="Zero Dev は、個人開発で制作したツール・ソフトウェア・技術作品をまとめて公開し、実際に利用できる場所を提供するWebサイトです。">
+  <link rel="canonical" href="https://zero-dev.jp/">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <h1>Zero Dev</h1>
-  <p>ただいま準備中です。</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/" class="active">HOME</a>
+        <a href="/tools/">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <section class="hero-section">
+        <h1 class="hero-title">Zero Dev</h1>
+        <p class="hero-description">
+          個人開発で制作した自作ツール・ソフトウェア・技術作品を公開し、実際にブラウザ上でご利用いただける場所を提供するサイトです。
+        </p>
+
+        <div class="tools-count-box">
+          <span class="tools-count-label">公開ツール数</span>
+          <div>
+            <span class="tools-count-number"><!-- TOOLS_COUNT:START -->0<!-- TOOLS_COUNT:END --></span>
+            <span class="tools-count-unit">点</span>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <a href="/tools/" class="btn btn-primary">ツール一覧を見る</a>
+          <a href="/consult/" class="btn btn-secondary">相談・要望を送る</a>
+        </div>
+      </section>
+
+      <section class="about-section card">
+        <h2>作者について</h2>
+        <p>
+          開発者：Zero Dev（tk030）。日常の不便を解消する実用ツールや、AIを活用したシステムなどを個人で設計・開発・公開しています。
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/tk030_lotto">note</a>
+        <span class="footer-divider">·</span>
+        <a href="#">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
 </body>
 </html>
