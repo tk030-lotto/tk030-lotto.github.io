@@ -14,9 +14,9 @@
   --text-primary: #f4f4f5;       /* 主見出し・メインテキスト（Zinc-100） */
   --text-secondary: #a1a1aa;     /* 本文・表データ・サブテキスト（Zinc-400） */
   --text-muted: #71717a;         /* プレースホルダー・単位・メタ情報（Zinc-500） */
-  --accent-blue: #3b82f6;        /* アクティブ・リンク・選択（ボタン背景: #2563eb） */
-  --accent-blue-hover: #1d4ed8;  /* ボタンホバー */
-  --accent-emerald: #10b981;     /* 成功・完了・ポジティブ指標 */
+  --accent-blue: #60a5fa;        /* 青系アクセント・リンク（Tailwind Blue-400） */
+  --accent-blue-hover: #3b82f6;  /* 青系ホバー */
+  --accent-emerald: #34d399;     /* 緑系アクセント・公開ツール数（Tailwind Emerald-400） */
   --accent-amber: #f59e0b;       /* 警告・注意・確認指標 */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
@@ -88,7 +88,7 @@ a {
 }
 
 a:hover {
-  color: #60a5fa;
+  color: #93c5fd;
 }
 
 a:focus-visible, button:focus-visible {
@@ -132,16 +132,20 @@ code, pre, .mono {
 .site-logo {
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--text-primary);
   letter-spacing: -0.02em;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  color: #60a5fa; /* フォールバック */
+  background: linear-gradient(90deg, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.15s ease;
 }
 
 .site-logo:hover {
-  color: var(--text-primary);
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .site-nav {
@@ -254,13 +258,13 @@ code, pre, .mono {
 
 .btn-primary {
   background-color: #2563eb;
-  border: 1px solid #3b82f6;
+  border: 1px solid #60a5fa;
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-blue-hover);
-  border-color: #60a5fa;
+  background-color: #1d4ed8;
+  border-color: #93c5fd;
   color: #ffffff;
 }
 
@@ -278,14 +282,19 @@ code, pre, .mono {
 
 /* Hero Section */
 .hero-section {
+  position: relative;
   margin-bottom: 48px;
+  padding: 32px 28px;
+  background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.12) 0%, rgba(52, 211, 153, 0.05) 45%, transparent 70%);
+  border-radius: var(--radius-md);
 }
 
 .hero-title {
-  font-size: 2.25rem;
+  font-size: 2.75rem;
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.03em;
+  line-height: 1.15;
   margin-bottom: 16px;
 }
 
@@ -300,30 +309,31 @@ code, pre, .mono {
 /* Stats / Count Display */
 .tools-count-box {
   display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 12px 20px;
+  align-items: baseline;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  padding: 0;
   margin-bottom: 32px;
 }
 
 .tools-count-label {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
 }
 
 .tools-count-number {
   font-family: var(--font-mono);
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
   color: var(--accent-emerald);
 }
 
 .tools-count-unit {
   font-size: 0.875rem;
   color: var(--text-muted);
+  margin-left: 2px;
 }
 
 /* About Section */
@@ -639,8 +649,12 @@ code, pre, .mono {
     padding: 36px 0 60px;
   }
 
+  .hero-section {
+    padding: 24px 16px;
+  }
+
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .hero-description {
@@ -657,8 +671,8 @@ code, pre, .mono {
   }
 
   .tools-count-box {
-    width: 100%;
-    justify-content: space-between;
+    width: auto;
+    justify-content: flex-start;
   }
 
   .tools-grid {
