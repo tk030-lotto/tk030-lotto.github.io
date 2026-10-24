@@ -333,7 +333,7 @@ def main():
         <span class="footer-divider">·</span>
         <a href="https://note.com/tk030_lotto">note</a>
         <span class="footer-divider">·</span>
-        <a href="#">My Tools</a>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
         <span class="footer-divider">·</span>
         <a href="/privacy/">プライバシーポリシー</a>
         <span class="footer-divider">·</span>
