@@ -519,6 +519,35 @@ code, pre, .mono {
   background-color: rgba(245, 158, 11, 0.1);
 }
 
+.tool-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  margin: 20px 0;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.08);
+  color: #fef3c7;
+}
+
+.tool-notice-icon {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.tool-notice-content {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.tool-notice-title {
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 2px;
+}
+
 .tool-title {
   font-size: 2rem;
   font-weight: 700;
