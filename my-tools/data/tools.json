@@ -1,0 +1,610 @@
+[
+  {
+    "id": "furima-post-calc",
+    "name": "メルカリの送料、結局どれが一番安い？｜送料だけでなく「資材代」まで含めて比べるツールを作りました",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "▼ツールのWeb版はこちら（ブラウザですぐに使えます） https://tk030-lotto.github.io/furima-post-calc/ サンプル画像 メルカリなどのフリマアプリで商品が売れたとき、 「これ、どの方法で送るのが...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/furima-post-calc",
+    "web_url": "https://tk030-lotto.github.io/furima-post-calc/",
+    "note_url": "https://note.com/zero_ai_dev/n/n3c14c1431477",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/317024143/rectangle_large_type_2_32e3bb722d1b5e120c8c8df023910baa.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-09-24",
+    "status": "公開中"
+  },
+  {
+    "id": "discount-rate-calculator",
+    "name": "「50%OFF＋30%OFF」",
+    "subtitle": "は80%OFFじゃない？割引の計算を一目で確認できる「割引率らくらく計算」",
+    "category": "AI開発",
+    "description": "▼ 無料・登録不要ですぐに使えるWebツールはこちら https://tk030-lotto.github.io/discount-rate-calculator/ サンプル画像 買い物をしていると、 「店内50%OFF、さらに商品が30%...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/discount-rate-calculator",
+    "web_url": "https://tk030-lotto.github.io/discount-rate-calculator/",
+    "note_url": "https://note.com/zero_ai_dev/n/n91dbd976f9ee",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/315153266/rectangle_large_type_2_ac1353b38692f18625f128458afab3e5.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-09-19",
+    "status": "公開中"
+  },
+  {
+    "id": "cost-rate-calculator",
+    "name": "原価率の計算、もっと簡単に。",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "「原価率らくらく計算」を作りました ▼ 原価率らくらく計算（ブラウザで今すぐ使えます・登録不要） https://tk030-lotto.github.io/cost-rate-calculator/ サンプル画像 商品やメニューの価格を決...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/cost-rate-calculator",
+    "web_url": "https://tk030-lotto.github.io/cost-rate-calculator/",
+    "note_url": "https://note.com/zero_ai_dev/n/na0d1bcfa1d54",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/314812039/rectangle_large_type_2_ff7e75c7abdea9e58fa0a575077b5feb.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-09-18",
+    "status": "公開中"
+  },
+  {
+    "id": "shipguard",
+    "name": "【個人開発】本番公開するのがちょっと怖い。その不安を減らすために「shipguard」を作った",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "Webアプリを作っていて、ある程度完成してくると、別の不安が出てきます。 「これ、本当にこのまま公開して大丈夫かな？」 アプリ自体は動いている。 画面も表示される。 必要な機能も一通り動く。 でも、本番公開の直前になると、コードを書いている...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/shipguard",
+    "web_url": "",
+    "note_url": "https://note.com/zero_ai_dev/n/n6e31c1890710",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/314916302/rectangle_large_type_2_25a7854082f3ff03981ab46f2ca93238.png",
+    "tags": [
+      "AI開発",
+      "開発支援"
+    ],
+    "release_date": "2026-09-18",
+    "status": "公開中"
+  },
+  {
+    "id": "ai-dev-beginner-navigator",
+    "name": "【ツール公開】AI開発初心者お助けナビを公開しました――AIに質問する前の「困った」を整理するローカルツール",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "🔗 Webアプリ（GitHub Pages） : https://tk030-lotto.github.io/ai-dev-beginner-navigator/ AIを使って開発していると、こんなことで困る AIを使ったプログラミング環境...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/ai-dev-beginner-navigator",
+    "web_url": "https://tk030-lotto.github.io/ai-dev-beginner-navigator/",
+    "note_url": "https://note.com/zero_ai_dev/n/ne4c47ee17476",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/314265488/rectangle_large_type_2_d8e7a3dcc9fd58b1660eeb243667d709.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-09-16",
+    "status": "公開中"
+  },
+  {
+    "id": "daily-calculation-tool",
+    "name": "年齢・日付・期間・時間をまとめて確認できる「日常計算ツール」を作りました",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "▼ 日常計算ツール（ブラウザですぐに使えます） https://tk030-lotto.github.io/daily-calculation-tool サンプル画像 日常生活では、年齢や日付、期間、時間について確認したいことが意外とあります...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/daily-calculation-tool",
+    "web_url": "https://tk030-lotto.github.io/daily-calculation-tool/",
+    "note_url": "https://note.com/zero_ai_dev/n/nef1966850a33",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/313814646/rectangle_large_type_2_adfc2b8562b950b0e74b93d21c54cd92.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-09-15",
+    "status": "公開中"
+  },
+  {
+    "id": "image-resizer",
+    "name": "画像をまとめてリサイズする単機能ツール「Image Resizer」を作った",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "▼ ブラウザですぐにお使いいただけます（完全無料・サーバー送信なし） https://tk030-lotto.github.io/image-resizer/ 画像をWebサイトに掲載したり、SNSへ投稿したり、メールや資料に添付したりする...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/image-resizer",
+    "web_url": "https://tk030-lotto.github.io/image-resizer/",
+    "note_url": "https://note.com/zero_ai_dev/n/n76d75fcda4f9",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/312204080/rectangle_large_type_2_84927e03df63d119c00256ae2e1869b5.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-09-10",
+    "status": "公開中"
+  },
+  {
+    "id": "lotto-numbers-visualization-tool",
+    "name": "ロト＆ナンバーズ 統合構造解析・出目表可視化ツール",
+    "subtitle": "ロトを「予想」するのではなく「構造を見る」",
+    "category": "その他",
+    "description": "ロト7・ロト6・ミニロト・ナンバーズ3・ナンバーズ4の過去出目データを統合分析し、出現頻度・引っ張り・スライド・未出現スパン・共起ペアなどを直感的に可視化するブラウザ完結型Webツール。",
+    "why": "当選番号の「予想」ではなく、過去データから数字の構造や出現パターン・傾向を客観的に観察・検証できる分析環境を作るため。",
+    "features": [
+      "ロト7/6/ミニロト/ナンバーズ3/4の5種を1つの画面で切り替え分析",
+      "出目表・出現頻度4段階（HOT/GOLD/RECOVERY/COLD）・スライド・未出現スパン可視化",
+      "過去の基準回号に戻って再検証可能なタイムトラベル機能＆Markdown出力対応"
+    ],
+    "github_url": "https://github.com/tk030-lotto/lotto-numbers-visualization-tool",
+    "web_url": "https://tk030-lotto.github.io/lotto-numbers-visualization-tool/",
+    "note_url": "https://note.com/zero_ai_dev/n/ndf9d3ef0a479",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/310744895/rectangle_large_type_2_77f4f02b82eaece8874190984f5221a0.png",
+    "tags": [
+      "データ可視化",
+      "Webツール",
+      "統計・分析",
+      "React"
+    ],
+    "release_date": "2026-09-06",
+    "status": "公開中"
+  },
+  {
+    "id": "hikitsuide-miyou-tool",
+    "name": "「引き継いでみよう。」",
+    "subtitle": "AIを変えても、開発は続けられる",
+    "category": "AI開発",
+    "description": "AI（ChatGPT・Claude・Gemini等）を切り替えたり新しいチャットへ移行する際に、「これまで何を作ったか」を最初から説明し直す面倒を減らす開発引き継ぎ支援ツール。",
+    "why": "AIツールを切り替える際やチャット履歴が肥大化してリフレッシュしたい時に、開発コンテキストや進捗状況を再説明する手間を削減するため。",
+    "features": [
+      "開発コンテキストの要約・引き継ぎプロンプト生成",
+      "仕様・進捗・注意点をワンクリックでコピー可能",
+      "ブラウザ完結（インストール・登録不要で即座に利用可能）"
+    ],
+    "github_url": "https://github.com/tk030-lotto/hikitsuide-miyou-tool",
+    "web_url": "https://tk030-lotto.github.io/hikitsuide-miyou-tool/",
+    "note_url": "https://note.com/zero_ai_dev/n/n76c9df6ca297",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/310106856/rectangle_large_type_2_e6cc863e1ad93efbdacfa1e9a7ff56e5.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-09-04",
+    "status": "公開中"
+  },
+  {
+    "id": "kokai-shitemiyou-tool",
+    "name": "「公開してみよう。」せっかく作ったなら、GitHubで公開してみる",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "🔗 公開Webツール（GitHub Pages）： https://tk030-lotto.github.io/kokai-shitemiyou-tool/ サンプル画像 AIを使ってソフトウェアを作った。 動いた。 自分でも使える。 ここ...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/kokai-shitemiyou-tool",
+    "web_url": "https://tk030-lotto.github.io/kokai-shitemiyou-tool/",
+    "note_url": "https://note.com/zero_ai_dev/n/n514c79b20c95",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/309162937/rectangle_large_type_2_380c27bc2f5ea65f77ec153ff0e9997f.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-09-01",
+    "status": "公開中"
+  },
+  {
+    "id": "mou-ikkai-tsukutte-miyou",
+    "name": "「もう一回作ってみよう。」AI開発で行き詰まったら、作り直すという選択肢",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "▼ ツールはこちら（無料・ブラウザで利用可能） https://tk030-lotto.github.io/mou-ikkai-tsukutte-miyou/ サンプル画像 AIを使ってソフトウェアを作っていると、うまくいかないことがありま...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/mou-ikkai-tsukutte-miyou",
+    "web_url": "https://tk030-lotto.github.io/mou-ikkai-tsukutte-miyou/",
+    "note_url": "https://note.com/zero_ai_dev/n/n57d367060d1e",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/308354290/rectangle_large_type_2_34963e74c112d00238e2413dac83aea8.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-08-30",
+    "status": "公開中"
+  },
+  {
+    "id": "recipe-quantity-calculator",
+    "name": "レシピの分量変更、もう計算しなくていい。CookScaleを作りました",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "人数を変えるだけで、料理に使いやすい分量に自動変換 👉 CookScale（Webツール・無料・登録不要） https://tk030-lotto.github.io/recipe-quantity-calculator/ サンプル画像 料...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/recipe-quantity-calculator",
+    "web_url": "https://tk030-lotto.github.io/recipe-quantity-calculator/",
+    "note_url": "https://note.com/zero_ai_dev/n/n6f431e0cc30d",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/308350342/rectangle_large_type_2_ec90962c2590e0078ad253c25755ab59.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-08-30",
+    "status": "公開中"
+  },
+  {
+    "id": "tsugi-ni-nani-suru",
+    "name": "「次に何する？」AI開発で迷ったときに、次の一歩を決める小さなツール",
+    "subtitle": "",
+    "category": "AI開発",
+    "description": "▼ ツールはこちら（ブラウザですぐに使えます・インストール不要） https://tk030-lotto.github.io/tsugi-ni-nani-suru/ サンプル画像 AIを使ってソフトウェアを作っていると、意外と困ることがあり...",
+    "why": "",
+    "features": [],
+    "github_url": "https://github.com/tk030-lotto/tsugi-ni-nani-suru",
+    "web_url": "https://tk030-lotto.github.io/tsugi-ni-nani-suru/",
+    "note_url": "https://note.com/zero_ai_dev/n/n8348bfd0b687",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/308034972/rectangle_large_type_2_6548d01d6d75fb8792c7936e3898e728.png",
+    "tags": [
+      "AI開発",
+      "Webツール"
+    ],
+    "release_date": "2026-08-29",
+    "status": "公開中"
+  },
+  {
+    "id": "korede-iino",
+    "name": "「これでいいの？」",
+    "subtitle": "AI生成物 動作確認・受入チェックリスト生成アシスタント",
+    "category": "AI開発",
+    "description": "AIが生成したコードやツールをそのまま完成品にせず、本当に意図通りの動作をしているかを初心者でも実機確認できるテスト項目を自動生成するWebツール。",
+    "why": "「AIに作ってもらって一見動くけれど、本当にこれで完成でいいのか分からない」という不安を解消し、自分の手で品質を確かめられるようにするため。",
+    "features": [
+      "作りたいツールや機能に応じた動作確認・受入チェック項目の即時生成",
+      "コードが読めなくても実際に動かして確認できる段階的テスト手順ガイド",
+      "ブラウザ完結・完全無料・外部通信ゼロ（Zero-Dependency）"
+    ],
+    "github_url": "https://github.com/tk030-lotto/korede-iino",
+    "web_url": "https://tk030-lotto.github.io/korede-iino/",
+    "note_url": "https://note.com/zero_ai_dev/n/n6b55da90bcef",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/307539649/rectangle_large_type_2_9669587e00f7262b8886a32e19168e83.png",
+    "tags": [
+      "AI開発",
+      "動作確認",
+      "初心者向け",
+      "Webツール"
+    ],
+    "release_date": "2026-08-27",
+    "status": "公開中"
+  },
+  {
+    "id": "error-de-tomaranai",
+    "name": "エラーで止まらない。",
+    "subtitle": "AI開発 エラー解決・質問プロンプトアシスタント",
+    "category": "AI開発",
+    "description": "開発中に赤いエラーが出た際、何が起きたかをAIへ的確に伝えて即座に解決へ導くプロンプトをワンクリック生成するWebツール。",
+    "why": "「エラーが出た瞬間に何をすればいいか分からず開発を諦めてしまう」という初心者の最大の挫折ポイントを解消するため。",
+    "features": [
+      "エラー文を貼り付けるだけでAIへの最適な解決依頼プロンプトを自動生成",
+      "エラーの根本原因と次に試すべき具体的なアクション手順を提示",
+      "ブラウザ完結・インストール不要（Zero-Dependency）"
+    ],
+    "github_url": "https://github.com/tk030-lotto/error-de-tomaranai",
+    "web_url": "https://tk030-lotto.github.io/error-de-tomaranai/",
+    "note_url": "https://note.com/zero_ai_dev/n/nf5d840afb041",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/307088609/rectangle_large_type_2_5a0a93b1db1e91b3b0d791f533a32219.png",
+    "tags": [
+      "AI開発",
+      "エラー解決",
+      "プロンプト生成",
+      "Webツール"
+    ],
+    "release_date": "2026-08-26",
+    "status": "公開中"
+  },
+  {
+    "id": "mazu-ugokashitemiyou",
+    "name": "まず動かしてみよう。",
+    "subtitle": "AI開発 実行アシスタント",
+    "category": "AI開発",
+    "description": "AIが生成したコードの動かし方・実行手順を迷わず整理し、AIへの確認用プロンプトを即時生成するWebツール。",
+    "why": "「AIに作ってもらったけれど、どうやって動かせばいいか分からない」という最初のハードルを解消するため。",
+    "features": [
+      "AI生成物の種類を選ぶだけの直感UI",
+      "実行手順・確認用プロンプトの即時ワンクリック生成",
+      "ブラウザ完結・完全無料（Zero-Dependency）"
+    ],
+    "github_url": "https://github.com/tk030-lotto/mazu-ugokashitemiyou",
+    "web_url": "https://tk030-lotto.github.io/mazu-ugokashitemiyou/",
+    "note_url": "https://note.com/zero_ai_dev/n/n4dba647152f8",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/306494014/rectangle_large_type_2_874c968eb4e252c9d6d3cc5dde9e5af9.png",
+    "tags": [
+      "AI開発",
+      "初心者向け",
+      "プロンプト生成",
+      "Webツール"
+    ],
+    "release_date": "2026-08-24",
+    "status": "公開中"
+  },
+  {
+    "id": "ai-ni-kiitemiyou",
+    "name": "分からないなら、AIに聞いてみよう。",
+    "subtitle": "AI質問プロンプト生成アシスタント",
+    "category": "AI開発",
+    "description": "開発中のエラーや不明点をAIへスムーズに質問するためのプロンプトを、思ったままの言葉から自動生成するWebツール。",
+    "why": "「エラーが出た時、AIにどう質問文を書けば意図が伝わるか考えるのが面倒」という悩みを解消するため。",
+    "features": [
+      "思ったままの言葉を入力するだけで最適な質問文を生成",
+      "エラー解決・実装方法・次ステップ確認など用途別テンプレート",
+      "ワンクリックコピーで即座にAIへ投入可能"
+    ],
+    "github_url": "https://github.com/tk030-lotto/ai-ni-kiitemiyou",
+    "web_url": "https://tk030-lotto.github.io/ai-ni-kiitemiyou/",
+    "note_url": "https://note.com/zero_ai_dev/n/n6486ae273be4",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/306502393/rectangle_large_type_2_58b0ba691b424bd781b16a800e880088.png",
+    "tags": [
+      "AI開発",
+      "プロンプト生成",
+      "デバッグ支援",
+      "Webツール"
+    ],
+    "release_date": "2026-08-23",
+    "status": "公開中"
+  },
+  {
+    "id": "nani-wo-tsukuru-ka-kimeyou",
+    "name": "「何を作るか決めよう。」",
+    "subtitle": "AI開発 アイデアアシスタント",
+    "category": "AI開発",
+    "description": "日常の「面倒」「不便」を入力するだけで、AIと一緒に作れそうな実用的ツール候補を自動提案するWebツール。",
+    "why": "最初のツールを作った後、「次は何を作ればいいか分からない」「自分の困りごとをどうツール化すればいいか分からない」を解決するため。",
+    "features": [
+      "完成されたアイデア不要、困りごとのキーワードから候補を抽出",
+      "実現難易度やおすすめ技術スタックも同時にガイド",
+      "そのまま次ステップの仕様作成ツールへ連携可能"
+    ],
+    "github_url": "https://github.com/tk030-lotto/nani-wo-tsukuru-ka-kimeyou",
+    "web_url": "https://tk030-lotto.github.io/nani-wo-tsukuru-ka-kimeyou/",
+    "note_url": "https://note.com/zero_ai_dev/n/n5a53833511e6",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/305516257/rectangle_large_type_2_53d78ad11950d0237c21437e494620f0.png",
+    "tags": [
+      "AI開発",
+      "アイデア出し",
+      "初心者向け",
+      "Webツール"
+    ],
+    "release_date": "2026-08-21",
+    "status": "公開中"
+  },
+  {
+    "id": "ai-assistant-first-step",
+    "name": "躊躇してないで、とにかく作ってみよう。",
+    "subtitle": "AI開発アシスタント (Web Application)",
+    "category": "AI開発",
+    "description": "「こんなの作って」とアイデアを入力するだけで、AI開発に必要な要件定義・README・仕様書を自動生成するWebアプリ。",
+    "why": "プログラミング知識や事前の勉強がなくても、誰でも最初の一歩を踏み出して自分専用のツールを作れるようにするため。",
+    "features": [
+      "スマホ（ガイド・確認）＋ PC（開発）の2画面スタイル対応",
+      "要件定義・README.md・仕様書.mdのワンストップ生成",
+      "初心者でも迷わない段階的なステップガイド"
+    ],
+    "github_url": "https://github.com/tk030-lotto/AI-",
+    "web_url": "https://tk030-lotto.github.io/AI-/",
+    "note_url": "https://note.com/zero_ai_dev/n/n6afc17926844",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/304378456/rectangle_large_type_2_5d49e02e80a3f3d504844a71a71bcf4f.png",
+    "tags": [
+      "AI開発",
+      "要件定義",
+      "仕様書生成",
+      "Webツール"
+    ],
+    "release_date": "2026-08-17",
+    "status": "公開中"
+  },
+  {
+    "id": "github-pre-publish-checker",
+    "name": "GitHub公開前チェッカー",
+    "subtitle": "ローカル完結型 リポジトリセキュリティ＆品質診断",
+    "category": "開発支援",
+    "description": "公開前のリポジトリ構成、不要ファイル、機密情報の混入リスクを完全ローカル・外部通信ゼロで自動チェックするGUIアプリ。",
+    "why": "公開時の情報漏洩リスクや構成漏れを未然に防ぎ、安心してオープンソース公開できるようにするため。",
+    "features": [
+      "完全ローカル動作（外部通信ゼロで機密情報も安全に検査）",
+      "総合スコアリング（0〜100点）＆問題箇所の具体的一覧化",
+      "ワンクリックでMarkdownレポート（CHECK_REPORT.md）出力"
+    ],
+    "github_url": "https://github.com/tk030-lotto/github-pre-publish-checker",
+    "web_url": "",
+    "note_url": "https://note.com/zero_ai_dev/n/n5812307d9ad8",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/303947466/rectangle_large_type_2_c5b6fb8b93f6f109de5209fe0911205e.png",
+    "tags": [
+      "開発支援",
+      "セキュリティ",
+      "品質管理",
+      "GitHub"
+    ],
+    "release_date": "2026-08-16",
+    "status": "公開中"
+  },
+  {
+    "id": "myvoice-speech",
+    "name": "MyVoice Speech",
+    "subtitle": "ローカル音声合成 (GPT-SoVITS v2 GUI)",
+    "category": "その他",
+    "description": "オープンソース音声合成モデル GPT-SoVITS v2 を利用し、少量の参照音声とテキストから自然な音声を完全ローカルで合成するGUIツール。",
+    "why": "外部APIキーやクラウドを使わず、自分のPC内だけでプライベートかつ高品質に音声合成を行うため。",
+    "features": [
+      "参照音声のドラッグ＆ドロップまたはWebマイク直接録音対応",
+      "リアルタイム原稿文字数カウント＆テキスト保存・読み込み",
+      "生成音声のブラウザ即時再生・WAVダウンロード保存"
+    ],
+    "github_url": "https://github.com/tk030-lotto/myvoice-speech",
+    "web_url": "",
+    "note_url": "https://note.com/zero_ai_dev/n/nc0a9a12badf3",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/302219633/rectangle_large_type_2_6df0d6df1a0581a7f488bc0077aec1fd.png",
+    "tags": [
+      "その他",
+      "AI音声",
+      "GPT-SoVITS",
+      "ローカルGUI"
+    ],
+    "release_date": "2026-08-10",
+    "status": "公開中"
+  },
+  {
+    "id": "directory-structure-visualizer",
+    "name": "ディレクトリ構造可視化ツール",
+    "subtitle": "Directory Structure Visualizer",
+    "category": "開発支援",
+    "description": "フォルダ階層を解析し、インタラクティブなツリー表示およびAIプロンプト貼り付け用のMarkdownツリーを瞬時に生成するWebツール。",
+    "why": "ChatGPTやClaudeなどAIにコード構造を説明する際、手作業でフォルダ構成を書く手間をゼロにするため。",
+    "features": [
+      "ドラッグ＆ドロップでフォルダを一発読み込み",
+      "node_modulesや隠しファイルの自動除外フィルタ",
+      "ワンクリックでMarkdown形式のツリーをクリップボードにコピー"
+    ],
+    "github_url": "https://github.com/tk030-lotto/directory-structure-visualizer",
+    "web_url": "",
+    "note_url": "https://note.com/zero_ai_dev/n/n92bca1a283db",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/301743911/rectangle_large_type_2_9a3accd6bfee040b8fa408a8f88f27e6.png",
+    "tags": [
+      "開発支援",
+      "Markdown",
+      "AIコンテキスト",
+      "可視化"
+    ],
+    "release_date": "2026-08-09",
+    "status": "公開中"
+  },
+  {
+    "id": "dev-tools-collection",
+    "name": "開発ツール集 (DevTools Suite)",
+    "subtitle": "AI協調開発支援 オールインワンGUI",
+    "category": "開発支援",
+    "description": "ドキュメント検査、セキュリティチェック、コンテキストパック生成、プロンプト差分比較を統合したフロントエンドWebアプリ集。",
+    "why": "AI開発で頻繁に使う小さなツール群を個別に起動する手間を省き、1つのダッシュボードから高速に操作できるようにするため。",
+    "features": [
+      "プロンプト差分比較 (PromptDiff)",
+      "AIコンテキストパック生成＆整合性検証",
+      "完全ローカル動作・高速レスポンス"
+    ],
+    "github_url": "https://github.com/tk030-lotto/dev-tools-collection",
+    "web_url": "",
+    "note_url": "https://note.com/zero_ai_dev/n/n7752efced40f",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/300274221/rectangle_large_type_2_7a13d2f3993c6377b529376daa3478ac.png",
+    "tags": [
+      "開発支援",
+      "AI開発",
+      "統合ツール",
+      "React"
+    ],
+    "release_date": "2026-08-04",
+    "status": "公開中"
+  },
+  {
+    "id": "basekit-suite",
+    "name": "BaseKit Suite",
+    "subtitle": "自己防衛型OSS開発基盤・業務ツールテンプレート",
+    "category": "開発支援",
+    "description": "セキュリティを自己防衛しながら、ランニングコスト0円で頑丈なWebアプリをAIワークフローで構築するためのOSS開発基盤。",
+    "why": "30件以上の検証プロジェクトから生まれたベストプラクティスを、誰もが再利用できる堅牢なお手本として公開するため。",
+    "features": [
+      "コンポーザブル（着脱可能）なモジュール設計",
+      "外部通信ゼロ・完全ローカル動作のセキュリティ保証",
+      "AI協調開発プロトコルと自動検証スクリプトを同梱"
+    ],
+    "github_url": "https://github.com/tk030-lotto/basekit-suite",
+    "web_url": "",
+    "note_url": "https://note.com/zero_ai_dev",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/296872352/ce71b7f267b987408937f876e7c147bd.png",
+    "tags": [
+      "開発支援",
+      "テンプレート",
+      "OSS",
+      "アーキテクチャ"
+    ],
+    "release_date": "2026-07-15",
+    "status": "公開中"
+  },
+  {
+    "id": "celestial-orbit-alignment",
+    "name": "天体軌道アライメント診断",
+    "subtitle": "宇宙物理シミュレーター ＆ デイリー診断",
+    "category": "その他",
+    "description": "天体力学の概念を取り入れ、日々の惑星軌道配置からインスピレーションを得るSF風インタラクティブWebシミュレーター。",
+    "why": "難解な宇宙物理や天体アライメントの面白さを、誰でもブラウザ上で直感的に体感できるようにするため。",
+    "features": [
+      "リアルタイムの天体シミュレーションアニメーション",
+      "日付に基づく軌道アライメント計算と診断スコア表示",
+      "ダークスペーステーマの美しいグラフィック演出"
+    ],
+    "github_url": "https://github.com/tk030-lotto/celestial-orbit-alignment",
+    "web_url": "",
+    "note_url": "https://note.com/zero_ai_dev/n/n31817d07757e",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/287992896/rectangle_large_type_2_07b1adb98d9a2abd9d21338851b991ed.png",
+    "tags": [
+      "その他",
+      "シミュレーター",
+      "SF",
+      "Webツール"
+    ],
+    "release_date": "2026-06-23",
+    "status": "公開中"
+  },
+  {
+    "id": "simple-sns-kit",
+    "name": "Simple SNS Kit",
+    "subtitle": "ブラウザ完結型・軽量社内SNSツールキット",
+    "category": "その他",
+    "description": "サーバー構築や複雑な設定なしで、ブラウザだけで手軽に動かせる軽量な業務・チーム向けコミュニケーションキット。",
+    "why": "「大掛かりな社内SNSを導入するほどではないが、チーム内で気軽に情報共有したい」というニーズに応えるため。",
+    "features": [
+      "サーバー不要・ブラウザストレージで完結動作",
+      "タイムライン投稿・スレッド返信・タグ付け機能",
+      "HTML/CSS/JSのみのZero-Dependency設計"
+    ],
+    "github_url": "https://github.com/tk030-lotto/simple_sns_kit",
+    "web_url": "",
+    "note_url": "https://note.com/zero_ai_dev",
+    "eyecatch": "",
+    "tags": [
+      "その他",
+      "業務効率化",
+      "コミュニケーション",
+      "Webツール"
+    ],
+    "release_date": "2026-06-15",
+    "status": "公開中"
+  },
+  {
+    "id": "office-automator",
+    "name": "Office Automator",
+    "subtitle": "ブラウザ完結型 業務自動化・ファイル処理ツール集",
+    "category": "ファイル・PC",
+    "description": "ExcelやCSVの文字化け修復・列並び替え・不要行削除など、日々の泥臭い手作業をブラウザだけで瞬時に自動処理する無料ツール集。",
+    "why": "「ちょっとしたファイル処理のために専用ソフトを入れたくない」「機密データを外部サーバーに送りたくない」という悩みを解決するため。",
+    "features": [
+      "インストール不要、HTMLをブラウザで開くだけで即利用可能",
+      "完全ローカル処理（ファイルデータは外部サーバーに一切送信されません）",
+      "CSV文字コード自動修復・不要行削除・結合など実用機能多数"
+    ],
+    "github_url": "https://github.com/tk030-lotto/office-automator",
+    "web_url": "",
+    "note_url": "https://note.com/zero_ai_dev/n/nee46b8dc6895",
+    "eyecatch": "https://assets.st-note.com/production/uploads/images/280331759/rectangle_large_type_2_f62c63b164c1a60fa13c34fc8008eb72.png",
+    "tags": [
+      "ファイル・PC",
+      "業務効率化",
+      "CSV",
+      "Excel",
+      "ブラウザ完結"
+    ],
+    "release_date": "2026-05-28",
+    "status": "公開中"
+  }
+]

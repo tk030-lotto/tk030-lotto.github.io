@@ -43,6 +43,7 @@ CATEGORY_LABELS = dict(CATEGORIES)
 STATIC_PAGES = [
     "https://zero-dev.jp/",
     "https://zero-dev.jp/tools/",
+    "https://zero-dev.jp/my-tools/",
     "https://zero-dev.jp/consult/",
     "https://zero-dev.jp/privacy/",
     "https://zero-dev.jp/disclaimer/",
