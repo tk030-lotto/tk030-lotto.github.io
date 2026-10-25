@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>指定キロバイト画像縮小ツール (TargetSize Compressor) | Zero Dev</title>
+  <meta name="description" content="役所申請やエントリーシートなどの「500KB以下」指定に合わせて、画像をブラウザ内で自動圧縮する完全ローカルWebツールです。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/target-size-compressor/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Site Header (Zero Dev 共通) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="指定キロバイト画像縮小ツール"
+        data-subtitle="TargetSize Compressor"
+        data-description="役所申請やエントリーシートなどの「500KB以下」指定に合わせて、画像をブラウザ内で自動圧縮する完全ローカルWebツールです。"
+        data-category="general"
+        data-image="/assets/tools/target-size-compressor.png"
+        data-published="2026-10-25">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">指定キロバイト画像縮小ツール</h1>
+          <p class="tool-subtitle">TargetSize Compressor</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/target-size-compressor.png" alt="TargetSize Compressor スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">TargetSize Compressor - メイン画面</figcaption>
+        </figure>
+
+        <!-- ツール本体埋め込みセクション -->
+        <section class="tool-section tool-app-section">
+          <h2>ツールを利用する</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 20px;">
+            画像をドラッグ＆ドロップまたは選択し、希望の目標容量を指定して「指定容量以下に圧縮する」を押してください。画像は外部サーバーへ送信されず、お使いの端末内だけで安全・高速に処理されます。
+          </p>
+
+          <div class="app-container" style="max-width: 100%; margin: 0; padding: 0;">
+            <!-- Step 1: Image Dropzone -->
+            <section class="card" aria-labelledby="heading-image-select">
+              <h3 id="heading-image-select" class="card-title">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                1. 画像の選択
+              </h3>
+              
+              <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" style="display: none;" aria-label="画像ファイルを選択">
+
+              <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="画像をドラッグ＆ドロップまたはクリックしてファイル選択">
+                <svg class="dropzone-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                </svg>
+                <div class="dropzone-text">ここに画像をドラッグ＆ドロップ または クリックして選択</div>
+                <div class="dropzone-subtext">対応形式: JPEG / PNG（透過自動白背景化）/ WebP</div>
+              </div>
+
+              <!-- Selected File Info -->
+              <div id="selected-file-card" class="selected-file-card" style="display: none;">
+                <img id="thumbnail-preview" class="thumbnail-preview" alt="選択画像のサムネイル">
+                <div class="file-meta">
+                  <div id="file-meta-name" class="file-meta-name">-</div>
+                  <div id="file-meta-details" class="file-meta-details">-</div>
+                </div>
+                <button type="button" id="btn-remove-file" class="btn-remove" title="画像を解除" aria-label="選択中の画像を解除">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- Step 2: Target Size Selection -->
+            <section class="card" aria-labelledby="heading-target-size">
+              <h3 id="heading-target-size" class="card-title">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                2. 目標容量の指定
+              </h3>
+
+              <!-- Preset Buttons -->
+              <div class="preset-group" role="radiogroup" aria-label="容量プリセット">
+                <button type="button" class="btn-preset" data-size="200" data-unit="KB" role="radio" aria-checked="false">200 KB</button>
+                <button type="button" class="btn-preset active" data-size="500" data-unit="KB" role="radio" aria-checked="true">500 KB</button>
+                <button type="button" class="btn-preset" data-size="1" data-unit="MB" role="radio" aria-checked="false">1 MB</button>
+                <button type="button" class="btn-preset" data-size="2" data-unit="MB" role="radio" aria-checked="false">2 MB</button>
+              </div>
+
+              <!-- Custom Size Input -->
+              <div class="custom-input-row">
+                <label for="custom-size-input">自由指定:</label>
+                <input type="number" id="custom-size-input" class="input-number" min="1" max="50000" placeholder="例: 500" value="500" aria-label="目標容量数値">
+                <select id="custom-unit-select" class="select-unit" aria-label="容量単位">
+                  <option value="KB" selected>KB 以下</option>
+                  <option value="MB">MB 以下</option>
+                </select>
+              </div>
+            </section>
+
+            <!-- Action Section -->
+            <section class="card" style="padding: 16px 20px;">
+              <button type="button" id="btn-compress" class="btn-action" disabled>
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+                <span id="btn-compress-text">指定容量以下に圧縮する</span>
+              </button>
+
+              <!-- Progress Box -->
+              <div id="progress-box" class="progress-box" style="display: none;" aria-live="polite">
+                <div class="spinner" aria-hidden="true"></div>
+                <div id="progress-text">処理準備中...</div>
+              </div>
+            </section>
+
+            <!-- Step 3: Result Section -->
+            <section id="result-card" class="card" style="display: none;" aria-labelledby="heading-result">
+              <h3 id="heading-result" class="card-title">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                3. 圧縮結果 & ダウンロード
+              </h3>
+
+              <!-- Metric Cards -->
+              <div class="metrics-grid">
+                <div class="metric-card">
+                  <div class="metric-label">元ファイル容量</div>
+                  <div id="metric-original-size" class="metric-value">-</div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-label">圧縮後容量</div>
+                  <div id="metric-result-size" class="metric-value highlight">-</div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-label">削減率</div>
+                  <div id="metric-reduction-rate" class="metric-value highlight">-</div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-label">解像度 / 採用品質</div>
+                  <div id="metric-quality-info" class="metric-value" style="font-size: 0.95rem;">-</div>
+                </div>
+              </div>
+
+              <!-- Preview & Download -->
+              <div class="preview-container">
+                <div class="result-img-wrapper">
+                  <img id="result-preview-img" class="result-img" alt="圧縮後画像プレビュー">
+                </div>
+                <button type="button" id="btn-download" class="btn-download">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                  </svg>
+                  <span id="btn-download-text">画像をダウンロード</span>
+                </button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- 用途 -->
+        <section class="tool-section">
+          <h2>用途</h2>
+          <p>
+            公的申請や資格試験、履歴書のWeb提出などで求められる「○○KB以下」「○MB以下」といった容量制限に合わせて、ブラウザ内で画像を自動圧縮・縮小するツールです。目標容量を指定するだけで、画質と解像度の最適値を自動探索し、目標サイズを超えない最高画質の画像を即座に生成します。画像は外部サーバーに送信されず、お使いのブラウザ内だけで安全に処理されます。
+          </p>
+        </section>
+
+        <!-- なぜ作ったか -->
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            役所の手続きや採用エントリー等で「500KB以下」などの厳しい容量制限を課される場面が多い一方、画質を保ちながら指定容量ぴったりに収めるには画質スライダーの手動調整を何度も繰り返す必要がありました。また、証明写真や公的書類といった機密性の高い画像を外部の圧縮サーバーへアップロードすることへのプライバシー上の懸念もありました。そこで、画像を外部へ一切送信せず、ブラウザ内だけで指定容量以下の最大画質を自動算出するツールとして開発しました。
+          </p>
+        </section>
+
+        <!-- 主な機能・特徴 -->
+        <section class="tool-section">
+          <h2>主な機能・特徴</h2>
+          <ul>
+            <li><strong>目標容量狙い撃ちの二分探索エンジン</strong>: 「200KB」「500KB」「1MB」「2MB」のプリセットや自由入力に対し、最大8回の二分探索によって目標容量を下回る最高品質を自動算出します（実証例：6960×4640px / 約4.0MBの写真を解像度維持のまま423.7KB・品質4%へ89.5%削減）。</li>
+            <li><strong>完全ローカル処理（外部通信ゼロ）</strong>: 画像の読み込みからCanvas描画、JPEGエンコード、ダウンロードまでの全工程がお使いの端末内（ブラウザ）で完結します。外部サーバーへの画像送信や通信トラッキングは一切行われません。</li>
+            <li><strong>透過画像の自動白背景合成と世代劣化防止</strong>: 透過PNGがJPEG化によって黒塗りになるのを防ぐため、自動で白背景（#FFFFFF）を合成します。また、品質調整だけで収まらず段階的リサイズ（0.85倍）を行う場合も、常に元画像から直接再サンプリングして多重圧縮によるボケ（世代劣化）を防ぎます。</li>
+            <li><strong>実容量ラベル付きダウンロード</strong>: 保存ファイル名に <code>[元ファイル名]_[実サイズ]KB.jpg</code>（例：<code>photo_424KB.jpg</code>）のように実容量が自動付与されるため、提出前の容量再確認が容易です。</li>
+          </ul>
+        </section>
+
+        <!-- 注意事項・限界 -->
+        <section class="tool-section">
+          <h2>注意事項・限界</h2>
+          <ul>
+            <li><strong>HEIC形式の非対応</strong>: iPhone等で撮影されたHEIC/HEIF形式はブラウザの標準仕様上直接読み込めないため、あらかじめJPEGやPNG等へ変換してからご利用いただく必要があります。</li>
+            <li><strong>高画素写真における処理負荷</strong>: 数千万画素を超える超高解像度写真の場合、端末のCPU/メモリスペックによってCanvasの展開やエンコード処理に数秒程度の時間を要する場合があります。</li>
+            <li><strong>透過情報の維持不可</strong>: 高効率な容量圧縮を行うため出力はJPEG形式に統一されており、透過PNGの透明部分はすべて白色に置換されます。</li>
+          </ul>
+        </section>
+
+        <!-- 操作デモ -->
+        <figure class="tool-media">
+          <img src="./assets/demo.gif" alt="TargetSize Compressor 操作デモ" width="800" height="450">
+          <figcaption class="tool-media-caption">操作デモ（ドラッグ＆ドロップで目標容量を指定し、自動で最大画質を算出・ダウンロード）</figcaption>
+        </figure>
+
+        <!-- アクションリンク -->
+        <section class="tool-actions-box">
+          <h2>リポジトリを見る</h2>
+          <div class="btn-group">
+            <a href="https://github.com/tk030-lotto/targetsize-compressor" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary">note 解説記事</a>
+          </div>
+        </section>
+
+        <!-- 開発支援 -->
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev/n/n6dcc8664c4cf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <!-- メタ情報 -->
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-10-25</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <!-- Site Footer (Zero Dev 共通) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" aria-live="polite">
+    <div id="toast" class="toast">
+      <span id="toast-message">処理が完了しました</span>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/config.js"></script>
+  <script src="./js/compressor.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

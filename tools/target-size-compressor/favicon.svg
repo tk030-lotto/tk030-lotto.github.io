@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="7" fill="#09090b" stroke="#27272a" stroke-width="1.5"/>
+  <!-- Image Frame -->
+  <rect x="6" y="6" width="20" height="20" rx="3" fill="#121215" stroke="#3b82f6" stroke-width="1.5"/>
+  <!-- Image Mountain / Sun -->
+  <circle cx="11" cy="11" r="2" fill="#10b981"/>
+  <path d="M7 21l6-6 4 4 3-3 5 5H7z" fill="#3b82f6" opacity="0.8"/>
+  <!-- Compression arrows pointing inward -->
+  <path d="M16 2v3m0 25v-3M2 16h3m25 0h-3" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
