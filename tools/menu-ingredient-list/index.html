@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>献立食材リスト | Zero Dev</title>
+  <meta name="description" content="200種類の定番料理から選ぶだけで必要な食材と分量をまとめて買い物リストを作成するWebアプリ。ブラウザ完結で個人情報不要。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/menu-ingredient-list/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="献立食材リスト"
+        data-subtitle="料理を選ぶだけで買い物リストを作成"
+        data-description="200種類の定番料理から選ぶだけで必要な食材と分量をまとめて買い物リストを作成するWebアプリ。ブラウザ完結で個人情報不要。"
+        data-category="general"
+        data-image="/assets/tools/menu-ingredient-list.png"
+        data-published="2026-10-29">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">献立食材リスト</h1>
+          <p class="tool-subtitle">料理を選ぶだけで買い物リストを作成</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/menu-ingredient-list.png" alt="献立食材リスト スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">献立食材リスト - メイン画面（料理カード選択と買い物リスト合算表示）</figcaption>
+        </figure>
+
+        <section class="tool-section">
+          <h2>用途</h2>
+          <p>
+            今日の夕飯のメニューが決まったあと、必要な食材をメモして買い物リストを作る手間を解消するWebツールです。豚の生姜焼きや肉じゃがなど200種類の定番家庭料理から作りたいものを選ぶだけで、必要な食材と合計分量を自動計算してまとめます。1人分〜4人分の人数切り替え、調味料の非表示、クリップボードへのワンタップコピーにも対応しています。外部サーバーへの通信は一切行わず、お使いの端末（ブラウザ）内だけで安全に完結します。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            毎日の料理で意外と面倒なのが、献立を決めたあとに「何を買えばいいか」を書き出す作業です。特に複数の料理を作る場合、「生姜焼きに玉ねぎ半分、肉じゃがにも玉ねぎ1個だから合計1個半…」と頭の中で計算するのは手間がかかります。食べたい料理をタップするだけで、必要な食材ときれいな買い物リストが一瞬で完成するツールがあれば便利だと思い開発しました。会員登録やログインは不要で、スマートフォンの片手操作でも快適に使えるよう設計しています。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>注意事項・限界</h2>
+          <ul>
+            <li>同一の食材名かつ同一の単位（g同士、個同士など）の場合のみ自動合算します。単位が異なる場合（「1本」と「100g」など）や、「少々」「適量」などの数値化できない調味料は、無理に合算せず別々の行として表示されます。</li>
+            <li>選択状態やチェックボックスの状態はブラウザの保存領域（LocalStorage）に自動保存されます。ブラウザの履歴やCookieを消去すると初期状態に戻ります。</li>
+          </ul>
+        </section>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/menu-ingredient-list/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/menu-ingredient-list" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev/n/n6dcc8664c4cf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-10-29</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2026 Zero Dev (tk030)</p>
+      <div class="footer-links">
+        <a href="/">HOME</a>
+        <a href="/tools/">ツール</a>
+        <a href="/about/">Zero Dev について</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/terms/">利用規約</a>
+        <a href="https://github.com/tk030-lotto/tk030-lotto.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
