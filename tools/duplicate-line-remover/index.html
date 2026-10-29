@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>重複行削除ツール | Zero Dev</title>
+  <meta name="description" content="テキストの重複行を一括で削除・抽出できるブラウザ完結型ツールです。外部通信を行わず、お使いの端末内のみで安全に処理します。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/duplicate-line-remover/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="重複行削除ツール"
+        data-subtitle="Duplicate Line Remover"
+        data-description="テキストの重複行を一括で削除・抽出できるブラウザ完結型ツールです。外部通信を行わず、お使いの端末内のみで安全に処理します。"
+        data-category="general"
+        data-image="/assets/tools/duplicate-line-remover.png"
+        data-published="2026-10-29">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">重複行削除ツール</h1>
+          <p class="tool-subtitle">Duplicate Line Remover</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/duplicate-line-remover.png" alt="重複行削除ツール スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">重複行削除ツール - メイン画面（2ペイン比較エディタ）</figcaption>
+        </figure>
+
+        <section class="tool-section">
+          <h2>用途</h2>
+          <p>
+            名簿、メールアドレスの一覧、商品コード、システムログなど、行単位で並んだテキストから重複した行を素早く検出し、1行にまとめて整理できるWebツールです。2回以上現れた重複行だけを抜き出す抽出機能や、空白トリム、大文字・小文字同一視、ソート機能も備えています。外部サーバーとの通信は一切行わず、すべての処理はお使いのパソコンのブラウザ内だけで安全に完結します。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            テキストの重複整理は日常業務でよくある作業ですが、個人情報や社外秘ログを含むデータを外部のWebサービスに貼り付けて処理するのはセキュリティ上の不安があります。そこで、通信を技術的に完全に遮断（CSP設定）し、オフラインでも安心して使えるブラウザ完結型のツールを作りました。また、誤操作で元データを消してしまう事故を防ぐため、画面を左右に分けて結果を別枠に出力し、元データを残したまま比較できる2ペイン設計としています。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>注意事項・限界</h2>
+          <ul>
+            <li>行単位での完全一致比較を行うため、行の一部だけが重複している文章や表現の揺らぎは別の行として扱われます。</li>
+            <li>対応ファイルはテキスト形式（.txt, .csv, .tsv, .log 等）です。Excel（.xlsx）やWord、PDFなどのバイナリファイルには対応していません。</li>
+            <li>ブラウザのフリーズを防ぐため、ファイル読み込みは 20MB を上限としています。10万行を超えるような超巨大テキストを処理する場合は、テキストを小分けにして実行することをおすすめします。</li>
+          </ul>
+        </section>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/duplicate-line-remover/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/duplicate-line-remover" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary">note 解説記事</a>
+          </div>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev/n/n6dcc8664c4cf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-10-29</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2026 Zero Dev (tk030)</p>
+      <nav class="footer-nav">
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
+
