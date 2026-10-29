@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>メルカリ・フリマ専用：送料・梱包サイズ判定ツール | Zero Dev</title>
+  <meta name="description" content="荷物の縦・横・厚さ・重量から利用可能な配送方法を自動判定。専用資材代を含めた実質総額の安い順に比較できます。向き不問の3辺自動ソートやポスト投函口の段階的注意喚起に対応。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/furima-post-calc/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="メルカリ・フリマ専用：送料・梱包サイズ判定ツール"
+        data-subtitle="資材代込みの実質総額で最安配送を判定"
+        data-description="荷物の縦・横・厚さ・重量から利用可能な配送方法を自動判定。専用資材代を含めた実質総額の安い順に比較できます。向き不問の3辺自動ソートやポスト投函口の段階的注意喚起に対応。"
+        data-category="general"
+        data-image="/assets/tools/furima-post-calc.png"
+        data-published="2026-10-29">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">メルカリ・フリマ専用：送料・梱包サイズ判定ツール</h1>
+          <p class="tool-subtitle">資材代込みの実質総額で最安配送を判定</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/furima-post-calc.png" alt="メルカリ・フリマ専用：送料・梱包サイズ判定ツール スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">メルカリ・フリマ専用：送料・梱包サイズ判定ツール - メイン画面（実質総額比較・サイズ判定）</figcaption>
+        </figure>
+
+        <section class="tool-section">
+          <h2>用途</h2>
+          <p>
+            メルカリなどのフリマアプリ出品時に、荷物の縦・横・厚さと重量を入力するだけで、利用可能な配送サービス（メルカリ便・郵便等）を自動判定し、専用資材代（専用箱やシール等）を含めた実質総額の最安順に比較できるWebツールです。3辺の向きを気にせず入力できる自動回転判定や、サイズ上限ギリギリ時の段階的警告、匿名配送（メルカリ便）限定フィルターを備えています。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            フリマ出品では、送料の安さだけで配送方法を選んだ結果、「専用箱代が別に70円かかり、実は別の配送方法のほうが安かった」と後悔することがよくあります。また、厚さ3cmピッタリで作ったつもりでも、梱包後の膨らみでポスト投函口に入らない不安もありました。そこで、資材代込みの実質総額で比較でき、3辺の向き不問で入力でき、上限ギリギリ時に注意を促すツールを作りました。外部通信は行わず、ブラウザの中だけで安心してご利用いただけます。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>注意事項・限界</h2>
+          <ul>
+            <li>送料や資材価格は標準的な価格（2026年10月基準）を元にしています。購入店舗（コンビニ・郵便局・100均等）の違いや将来の改定により、実際の金額と異なる場合があります。</li>
+            <li>郵便ポストの投函口（従来型約3cm、新型約4cm）の個体差や梱包後の膨らみにより投函できない場合があります。上限ギリギリの場合は窓口や新型ポストでの発送をおすすめします。</li>
+            <li>本ツールは個人による非公式ツールです。株式会社メルカリおよび各配送事業者とは関係ありません。実際の引き受け可否は窓口での計測結果が優先されます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/furima-post-calc/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/furima-post-calc" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev/n/n6dcc8664c4cf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-10-29</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2026 Zero Dev (tk030)</p>
+      <nav class="footer-nav">
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
+
