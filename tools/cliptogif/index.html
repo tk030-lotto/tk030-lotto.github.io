@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClipToGif | Zero Dev</title>
+  <meta name="description" content="スマホの画面録画や動画から必要な区間を切り出し、軽量なGIFアニメへ変換するWebツール。動画を外部サーバーへ送信せずブラウザ内のみで処理します。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/cliptogif/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="ClipToGif"
+        data-subtitle="動画や画面録画を軽量GIFに変換するツール"
+        data-description="スマホの画面録画や動画から必要な区間を切り出し、軽量なGIFアニメへ変換するWebツール。動画を外部サーバーへ送信せずブラウザ内のみで処理します。"
+        data-category="general"
+        data-image="/assets/tools/cliptogif.png"
+        data-published="2026-10-29">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">ClipToGif</h1>
+          <p class="tool-subtitle">動画や画面録画を軽量GIFに変換するツール</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/cliptogif.png" alt="ClipToGif スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">ClipToGif - メイン画面（動画プレビュー・区間指定・GIF生成）</figcaption>
+        </figure>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            スマートフォンの操作録画やアプリの動作デモを、チャット（SlackやDiscordなど）で手軽に共有したいとき、ブログや技術ドキュメントに数秒の短い操作手順アニメーションを貼り付けたいとき、動画編集ソフトや専用アプリをインストールせず、ブラウザだけでサッとGIFを作成したいときに役立ちます。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li><strong>ブラウザ内ローカル処理</strong>: 動画ファイルを外部サーバーにアップロードせず、お使いの端末のブラウザ内だけで変換処理を行います。</li>
+            <li><strong>直感的な区間切り出し</strong>: 開始と終了のスライダーに加え、「現在の再生位置を設定」ボタンや±0.1秒の微調整ボタンで、必要な場面（最大10秒）だけを正確に切り出せます。</li>
+            <li><strong>縦動画・横動画に合わせた長辺リサイズ</strong>: スマホの縦長動画でもパソコンの横長動画でも、長辺の長さ（320px / 480px / 640px）を基準にアスペクト比を維持して自動リサイズします。</li>
+            <li><strong>容量を抑える軽量設定</strong>: チャットのインライン表示に適した10fpsや15fpsを選べます。</li>
+            <li><strong>プレビューと推定容量の確認</strong>: 作成したGIFをその場でループ再生し、ファイルサイズや容量の目安（軽量・標準・注意）を確認してから保存できます。</li>
+            <li><strong>ワンクリックで試せるサンプル動画</strong>: 手元に動画がなくても、「✨ サンプル動画で試す」ボタンですぐに変換の流れを体験できます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意点</h2>
+          <ul>
+            <li><strong>10秒を超える長時間のGIF変換</strong>: 変換できる長さは最長10秒までです。長時間の動画全体の変換には向いていません。</li>
+            <li><strong>iPhoneの一部動画形式（HEVC/H.265）</strong>: iPhoneの画面録画で再生エラーが出る場合は、「互換性優先（H.264）」で撮影された動画またはMP4形式の動画をご利用ください。</li>
+            <li><strong>実写やグラデーションの完全な色再現</strong>: GIFの仕様上、使える色は最大256色に限られるため、複雑な実写映像では粗さや粒状感が生じる場合があります。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            スマートフォンの画面録画を人に説明するとき、動画のまま送るとファイルサイズが大きすぎてチャットに貼れなかったり、相手が再生ボタンを押す手間がかかったりします。
+          </p>
+          <p>
+            「必要な数秒だけをパッとGIFにして共有したい」と思っても、一般的なオンライン変換サービスにプライベートな画面録画をアップロードするのは抵抗がありました。また、スマホの縦動画は解像度が高いため、従来の「横幅基準」のリサイズツールにかけると縦が1,000ピクセルを超えてしまい、かえってファイル容量が膨れ上がってしまうという問題もありました。
+          </p>
+          <p>
+            そこで、動画データを一切外部へ送信せず、ブラウザ内だけで素早く軽量GIFを作成できるツールとしてClipToGifを作りました。縦動画でも横動画でも容量が均一になるよう「長辺基準」のリサイズを採用し、チャットで快適に共有できるサイズへ簡単に落とせるように工夫しています。
+          </p>
+        </section>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/cliptogif/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/cliptogif" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev/n/n6dcc8664c4cf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-10-29</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2026 Zero Dev (tk030)</p>
+      <div class="footer-links">
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/disclaimer/">免責事項</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
