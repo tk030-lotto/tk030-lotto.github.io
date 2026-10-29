@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>履歴書・学歴・年次自動計算機 | Zero Dev</title>
+  <meta name="description" content="生年月日から満年齢・和暦・学歴年月（入学・卒業）を自動計算するブラウザ完結型ツールです。外部通信を行わず端末内のみで処理します。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/resume-date-calculator/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="履歴書・学歴・年次自動計算機"
+        data-subtitle="Resume Date Calculator"
+        data-description="生年月日から満年齢・和暦・学歴年月（入学・卒業）を自動計算するブラウザ完結型ツールです。外部通信を行わず端末内のみで処理します。"
+        data-category="general"
+        data-image="/assets/tools/resume-date-calculator.png"
+        data-published="2026-10-29">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">履歴書・学歴・年次自動計算機</h1>
+          <p class="tool-subtitle">Resume Date Calculator</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/resume-date-calculator.png" alt="履歴書・学歴・年次自動計算機 スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">履歴書・学歴・年次自動計算機 - メイン画面（基本情報サマリーと学歴タイムライン）</figcaption>
+        </figure>
+
+        <section class="tool-section">
+          <h2>用途</h2>
+          <p>
+            履歴書や職務経歴書を作成する際、小学校から大学までの入学・卒業年月を正確に割り出すためのWebツールです。生年月日を選ぶだけで、満年齢、今日の和暦、日齢、干支、厄年・年祝いとともに、正確な学歴タイムラインを自動で計算して整理します。1月1日〜4月1日生まれの「早生まれ」や、浪人・留年（休学）、高専・短大・大学院・専門学校などの多様な進路にも対応しています。学校名を入力してワンタップでWordやExcel用のタブ区切りテキストを一括コピーできます。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            履歴書を書く機会は人生の中でそれほど多くありません。だからこそ、いざ書こうとしたときに「高校に入学したのは何年だったか」「大学を卒業したのは西暦何年で和暦だと何年か」と調べる手間が発生します。特に早生まれの場合、学年の区切りが通常と異なるため計算を間違えやすくなります。こうした煩わしさを解消し、生年月日を一度選ぶだけで迷わず正確な下書きを作れるツールがあれば便利だと考え開発しました。個人情報である生年月日を扱うため、外部サーバーへの通信は一切行わず、お使いのパソコンのブラウザ内だけで安全に完結する設計としています。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>注意事項・限界</h2>
+          <ul>
+            <li>日本の学校教育法および関連法令に基づく標準的な修業年限（小学校6年、中学校3年、高校3年など）を前提としています。飛び級、早期卒業、秋入学、海外留学等の特殊な就学形態には対応していません。</li>
+            <li>入力された生年月日や学校名は、ブラウザのメモリ内でのみ一時的に保持されます。CookieやLocalStorage等への保存は行われないため、ページを再読み込みすると初期状態に戻ります。</li>
+            <li>本ツールの計算結果は一般的な法令・慣例に基づく目安です。公的な履歴書提出にあたっては、必ずご自身で卒業証明書等をご確認の上ご利用ください。</li>
+          </ul>
+        </section>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/resume-date-calculator/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/resume-date-calculator" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev/n/n6dcc8664c4cf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-10-29</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2026 Zero Dev (tk030)</p>
+    </div>
+  </footer>
+</body>
+</html>
+
