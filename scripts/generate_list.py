@@ -27,7 +27,7 @@ if sys.stderr and hasattr(sys.stderr, "reconfigure"):
 
 
 RESERVED_NAMES = {
-    "tools", "consult", "privacy", "disclaimer",
+    "tools", "consult", "privacy", "disclaimer", "about",
     "assets", "css", "js", "scripts"
 }
 
@@ -45,6 +45,7 @@ STATIC_PAGES = [
     "https://zero-dev.jp/tools/",
     "https://zero-dev.jp/my-tools/",
     "https://zero-dev.jp/consult/",
+    "https://zero-dev.jp/about/",
     "https://zero-dev.jp/privacy/",
     "https://zero-dev.jp/disclaimer/",
 ]
@@ -336,6 +337,8 @@ def main():
         <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
         <span class="footer-divider">·</span>
         <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
         <span class="footer-divider">·</span>
         <a href="/privacy/">プライバシーポリシー</a>
         <span class="footer-divider">·</span>
