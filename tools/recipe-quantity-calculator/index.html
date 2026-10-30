@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>料理分量らくらく計算 | Zero Dev</title>
+  <meta name="description" content="レシピの人数変更や分量計算をその場で解決する無料のブラウザ完結Webツール。大さじ・小さじの組み合わせ換算や複数材料の一括貼り付けに対応。外部通信なしで安心。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/recipe-quantity-calculator/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="料理分量らくらく計算"
+        data-subtitle="レシピの人数・分量を瞬時に自動換算"
+        data-description="レシピの人数変更や分量計算をその場で解決する無料のブラウザ完結Webツール。大さじ・小さじの組み合わせ換算や複数材料の一括貼り付けに対応。外部通信なしで安心。"
+        data-category="general"
+        data-image="/assets/tools/recipe-quantity-calculator.png"
+        data-published="2026-10-30">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">料理分量らくらく計算</h1>
+          <p class="tool-subtitle">レシピの人数・分量を瞬時に自動換算</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/recipe-quantity-calculator.png" alt="料理分量らくらく計算 スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">料理分量らくらく計算 - メイン画面（材料の自動解析と人数倍率換算表示）</figcaption>
+        </figure>
+
+        <section class="tool-section">
+          <h2>用途</h2>
+          <p>
+            料理本やレシピサイトで見つけた「2人分」のレシピを「3人分」や「4人分」に作り直したいとき、電卓を取り出して1つずつ計算する手間をなくすWebツールです。レシピテキストをまとめて貼り付けるだけで、指定した人数に合わせて材料の分量を瞬時に再計算します。
+          </p>
+          <p>
+            調理中に手が濡れていたり、慌ただしい台所でもスムーズに確認できるよう、シンプルな画面構成と大きな文字表示にこだわりました。会員登録やログインは不要で、ブラウザを開けばすぐに使えます。外部サーバーへの通信は一切行わず、お使いの端末（ブラウザ）内だけで安全に完結します。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li><strong>レシピテキストの一括貼り付け・自動解析</strong>: 複数行にわたる材料リストをまとめて入力欄に貼り付けるだけで、材料名と分量を自動で判別します。「鶏もも肉 300g 醤油 大さじ2」のようにスペースや読点で並んだ記述にも対応します。</li>
+            <li><strong>人数の倍率自動計算</strong>: 「元の人数」と「作りたい人数」を入力するだけで、すべての分量を一瞬で換算します。</li>
+            <li><strong>計量しやすい単位への自動整形</strong>: 大さじ・小さじの計算では、「大さじ1＋小さじ1.5」のように実際の計量スプーンで量りやすい組み合わせへ最適化して表示します。</li>
+            <li><strong>「少々」「適量」のそのまま保持</strong>: 「塩 少々」や「こしょう 適量」といった数値化できない表現は無理に計算せず、元の表記のまま残します。</li>
+            <li><strong>計算結果のワンクリックコピー</strong>: 換算後の材料リストをボタン一つでクリップボードへコピーし、メモ帳やメッセージアプリに貼り付けられます。</li>
+            <li><strong>お気に入りレシピの保存</strong>: よく作る料理のレシピをブラウザ内に保存し、次回からワンクリックで呼び出せます。</li>
+            <li><strong>ダークモード切り替え</strong>: 調理環境の照明に合わせて、見やすい配色に切り替えられます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>注意事項・限界</h2>
+          <ul>
+            <li>「1と1/2」のような帯分数や、特殊な助数詞には対応していない場合があります（一般的な「1/2」「大さじ」「g」「ml」「個」「本」などに対応しています）。</li>
+            <li>材料名と数値の間にスペースや区切りがないと、正しく認識できないことがあります。</li>
+            <li>お気に入りや入力データはお使いの端末（ブラウザの LocalStorage）にのみ保存されます。ブラウザの履歴やキャッシュを消去するとデータも消去されます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            家族構成や来客に合わせてレシピの分量を変えたい場面は日常的によくあります。しかし、大さじ2の1.5倍は何杯か、300gの3/4は何グラムかといった計算を調理中に暗算するのは意外と集中力を削がれる作業です。
+          </p>
+          <p>
+            「レシピをそのまま貼り付けるだけで、迷わず手早く計量できる状態にしたい」という自分自身の日常の困りごとからこのツールを作りました。入力されたレシピ内容が外部のサーバーに送信されることは一切なく、すべての計算はお使いの端末内だけで行われます。電卓代わりに気兼ねなくお使いください。
+          </p>
+        </section>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/recipe-quantity-calculator/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/recipe-quantity-calculator" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev/n/n6dcc8664c4cf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-10-30</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2026 Zero Dev (tk030)</p>
+      <div class="footer-links">
+        <a href="/">HOME</a>
+        <a href="/tools/">ツール</a>
+        <a href="/about/">Zero Dev について</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/terms/">利用規約</a>
+        <a href="https://github.com/tk030-lotto/tk030-lotto.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
