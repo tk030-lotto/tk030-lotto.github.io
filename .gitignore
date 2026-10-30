@@ -13,3 +13,11 @@ GEMINI.md
 .agents/
 knowledge/
 RECORD.md
+
+# Python キャッシュ
+__pycache__/
+*.pyc
+
+# 作業用スクリプト
+scripts/setup_photo_generator.py
+
