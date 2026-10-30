@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>クレジットカード管理ツール | Zero Dev</title>
+  <meta name="description" content="自身が持つクレジットカードの締め日・支払日を登録し、利用日から次回支払予定日や猶予日数を手軽に確認・シミュレーションできるブラウザ完結のWebツールです。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/credit-card-manager/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="クレジットカード管理ツール"
+        data-subtitle="締め日と利用日から支払予定日を逆引き"
+        data-description="自身が持つクレジットカードの締め日・支払日を登録し、利用日から次回支払予定日や猶予日数を手軽に確認・シミュレーションできるブラウザ完結のWebツールです。"
+        data-category="general"
+        data-image="/assets/tools/credit-card-manager.png"
+        data-published="2026-10-30">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">クレジットカード管理ツール</h1>
+          <p class="tool-subtitle">締め日と利用日から支払予定日を逆引き</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/credit-card-manager.png" alt="クレジットカード管理ツール スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">クレジットカード管理ツール - メイン画面（カード一覧・支払日カウントダウン・シミュレーター）</figcaption>
+        </figure>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            複数のクレジットカードを使っていて、カードごとの締め日や引き落とし日を覚えきれないときや、「今日このカードで買ったら、引き落としは何月何日になるか」をすぐに確かめたいときに便利です。大きな買い物をするときに、最も支払い猶予が長くなるカードを比較して選ぶのにも役立ちます。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li><strong>カード設定の管理</strong>: カード名、締め日（指定日／月末）、支払月、支払日、休日補正（翌営業日／前営業日等）を自由に登録・管理できます。</li>
+            <li><strong>直近スケジュールの可視化</strong>: 次回締め日・次回支払日までの残り日数を自動でカウントダウン表示します。</li>
+            <li><strong>利用日シミュレーター</strong>: カレンダーで買い物予定日を選ぶだけで、全カードの支払予定日と支払いまでの猶予日数を一括計算して比較できます。</li>
+            <li><strong>安心のデータ管理</strong>: 設定データはお使いの端末のブラウザ（localStorage）にのみ保存され、JSONファイルでのバックアップ・復元も可能です。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li><strong>実際の銀行口座残高確認や引き落とし処理</strong>: 本ツールは日付サイクルのシミュレーション専用ツールであり、金融機関やカード会社とのオンライン通信連携は行いません。</li>
+            <li><strong>カード番号等の機密情報の保管</strong>: カード番号、有効期限、セキュリティコードなどの機密情報は一切取り扱いません（入力欄もありません）。</li>
+            <li><strong>計算結果の性質</strong>: 本ツールの算出結果は目安です。カード会社ごとの特別な特約や規約変更により実際の日程と異なる場合がありますので、正確な日程は各カード会社の公式Web明細をご確認ください。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            普段の生活で複数のクレジットカードを使い分けていると、「Aカードは15日締めの翌月10日払い、Bカードは月末締めの翌月27日払い」といった条件が頭の中で混ざってしまいがちです。
+          </p>
+          <p>
+            特に大きな買い物をするとき、「今日買ったら来月の支払いに間に合うのか、それとも再来月になるのか」をカード会社の会員サイトにログインして調べるのは手間がかかります。かといって、カード番号や個人情報を預ける家計簿アプリを使うのも少し抵抗がありました。
+          </p>
+          <p>
+            そこで、自分自身の管理用として、「個人情報を入力することなく、手元のブラウザだけで完結して、買い物した日から次回支払日をすぐに逆引きできるツール」を作りました。
+          </p>
+        </section>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/credit-card-manager/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/credit-card-manager" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+          </div>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-10-30</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2026 Zero Dev (tk030)</p>
+      <nav class="footer-nav">
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
+
