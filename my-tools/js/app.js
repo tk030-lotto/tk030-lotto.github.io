@@ -15,6 +15,8 @@
   // 「0件」と「読み込み失敗」を同じ空配列で扱うと誤案内になるため、状態を分けて持つ (F-03)
   let loadStatus = 'loading';
   let loadErrorMessage = '';
+  // モーダルを開く前にフォーカスがあった要素（閉じたとき戻す）(F-09)
+  let lastFocusedElement = null;
 
   // DOM Elements
   const toolGrid = document.getElementById('toolGrid');
@@ -99,6 +101,11 @@
    * Set up all event listeners
    */
   function setupEventListeners() {
+    // タブが操作する領域を明示する (F-09)
+    categoryTabs.querySelectorAll('[role="tab"]').forEach((tab) => {
+      tab.setAttribute('aria-controls', 'toolGrid');
+    });
+
     // Search input
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value.trim().toLowerCase();
@@ -173,6 +180,20 @@
       if (e.key === 'Escape' && detailModal.classList.contains('active')) {
         closeModal();
       }
+    });
+
+    // タブは矢印キーで移動できる（WAI-ARIA の tabs パターン）(F-09)
+    categoryTabs.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      const tabs = [...categoryTabs.querySelectorAll('[role="tab"]')];
+      const index = tabs.indexOf(document.activeElement);
+      if (index === -1) return;
+      e.preventDefault();
+      const nextIndex = e.key === 'ArrowRight'
+        ? (index + 1) % tabs.length
+        : (index - 1 + tabs.length) % tabs.length;
+      tabs[nextIndex].focus();
+      tabs[nextIndex].click();
     });
   }
 
@@ -439,7 +460,12 @@
 
     detailModal.classList.add('active');
     detailModal.setAttribute('aria-hidden', 'false');
+    detailModal.setAttribute('aria-modal', 'true');
     document.body.style.overflow = 'hidden';
+
+    // キーボード操作の続きが分かるよう、開いた直後は「閉じる」へフォーカスを移す (F-09)
+    lastFocusedElement = document.activeElement;
+    if (modalCloseBtn) modalCloseBtn.focus();
   }
 
   // Backward compatibility
@@ -451,7 +477,14 @@
   function closeModal() {
     detailModal.classList.remove('active');
     detailModal.setAttribute('aria-hidden', 'true');
+    detailModal.removeAttribute('aria-modal');
     document.body.style.overflow = '';
+
+    // 開く前にフォーカスがあった要素へ戻す (F-09)
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+    }
+    lastFocusedElement = null;
   }
 
   /**
