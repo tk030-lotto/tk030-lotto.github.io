@@ -854,6 +854,21 @@ body {
   font-size: 0.78rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
+  line-height: 1.9;
+}
+
+/* フッター内のリンク（LICENSE / Zero Dev）を既存の配色に揃える (F-08) */
+.copyright a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+  /* 折返しでリンク自体が2行に割れると、当たり判定が前の行と重なるため */
+  white-space: nowrap;
+}
+
+.copyright a:hover {
+  color: var(--accent-blue);
 }
 
 /* ==========================================================================

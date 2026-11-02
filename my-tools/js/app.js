@@ -11,6 +11,10 @@
   let currentCategory = 'ALL';
   let searchQuery = '';
   let currentSort = 'newest';
+  // 読み込み状態（'loading' | 'ready' | 'error'）。
+  // 「0件」と「読み込み失敗」を同じ空配列で扱うと誤案内になるため、状態を分けて持つ (F-03)
+  let loadStatus = 'loading';
+  let loadErrorMessage = '';
 
   // DOM Elements
   const toolGrid = document.getElementById('toolGrid');
@@ -41,6 +45,10 @@
   async function init() {
     setupEventListeners();
     await loadToolsData();
+    if (loadStatus === 'error') {
+      showLoadError();
+      return;
+    }
     updateCounts();
     render();
   }
@@ -54,16 +62,36 @@
       if (!res.ok) {
         throw new Error(`Failed to load tools.json: ${res.status}`);
       }
-      toolsData = await res.json();
+      const data = await res.json();
+      if (!Array.isArray(data)) {
+        throw new Error('tools.json の形式が不正です（配列ではありません）');
+      }
+      toolsData = data;
+      loadStatus = 'ready';
     } catch (err) {
       console.error('Data load error:', err);
-      toolGrid.innerHTML = `
-        <div class="empty-state">
-          <div class="empty-icon">⚠️</div>
-          <h3>データの読み込みに失敗しました</h3>
-          <p>${err.message}</p>
-        </div>
-      `;
+      loadStatus = 'error';
+      loadErrorMessage = (err && err.message) ? err.message : '不明なエラー';
+    }
+  }
+
+  /**
+   * 読み込み失敗の表示（「該当なし」とは別の状態として出す）(F-03)
+   */
+  function showLoadError() {
+    emptyState.style.display = 'none';
+    toolGrid.innerHTML = `
+      <div class="empty-state" role="alert">
+        <div class="empty-icon">⚠️</div>
+        <h3>データの読み込みに失敗しました</h3>
+        <p>${escapeHtml(loadErrorMessage)}</p>
+        <p>ネットワークの状態を確認して、もう一度読み込んでください。</p>
+        <button type="button" class="reset-btn" id="reloadBtn">再読み込み</button>
+      </div>
+    `;
+    const reloadBtn = document.getElementById('reloadBtn');
+    if (reloadBtn) {
+      reloadBtn.addEventListener('click', () => location.reload());
     }
   }
 
@@ -228,6 +256,9 @@
    * Render Compact Cards
    */
   function render() {
+    // 読み込みが終わる前・失敗した後は描画しない（空配列で「該当なし」を出さない）(F-03)
+    if (loadStatus !== 'ready') return;
+
     const filtered = getFilteredTools();
     visibleCountEl.textContent = filtered.length;
 
