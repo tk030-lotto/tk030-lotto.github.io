@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>作りっぱなし対策ツール集 | Zero Dev</title>
+  <meta name="description" content="Markdownのリンク検査、公開前の点検、引き継ぎ文書の生成、2つのテキストの差分表示、文書間の表記ゆれ検査を、ブラウザ内で行う5つのツールです。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/dev-tools-collection/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="作りっぱなし対策ツール集"
+        data-subtitle="Markdownリンク検査など5機能"
+        data-description="Markdownのリンク検査、公開前の点検、引き継ぎ文書の生成、2つのテキストの差分表示、文書間の表記ゆれ検査を、ブラウザ内で行う5つのツールです。"
+        data-category="dev"
+        data-image="/assets/tools/dev-tools-collection.png"
+        data-published="2026-11-08">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-dev">開発・作業支援ツール</span>
+          </div>
+          <h1 class="tool-title">作りっぱなし対策ツール集</h1>
+          <p class="tool-subtitle">Markdownリンク検査など5機能</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/dev-tools-collection.png" alt="作りっぱなし対策ツール集 スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">作りっぱなし対策ツール集 - ダッシュボード画面（5つの支援ツール）</figcaption>
+        </figure>
+
+        <section class="tool-section">
+          <h2>用途</h2>
+          <p>
+            文書やリポジトリを作成したあとに必要となる、リンク切れの確認、公開してはいけない機密情報パターンの点検、引き継ぎ文書の作成、テキストの差分比較、文書間の表記ゆれ検査を、ブラウザ内だけで実行できる5つの開発支援ツール集です。
+          </p>
+          <p>
+            ソフトウェア開発やドキュメント作成の現場において、作業完了後の点検や整理を手軽に行うことができます。ファイルや入力データは外部サーバーへ送信されず、お使いのブラウザ内（ローカルメモリ上）のみで安全に処理されます。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li><strong>Markdown Link Checker</strong>: Markdownファイル内の相対パスリンク、画像参照パス、ページ内見出しアンカー、外部URLの構文を検査し、リンク切れの箇所を一覧表示します。</li>
+            <li><strong>GitHub Preflight</strong>: リポジトリを公開する前に、APIキーやトークン等の機密情報パターン、不要ファイル（.env, node_modules等）、大容量ファイル、未解決のデバッグコード（console.log, debugger, TODO）を点検します。</li>
+            <li><strong>Handoff Pack</strong>: 作業の目的、完了項目、残課題、関連ファイルを入力し、AIエージェントやチームメンバーへの引き継ぎ用Markdown文書を3種類のテンプレート（Standard / Minimal / Full Context）から生成します。</li>
+            <li><strong>Prompt Diff</strong>: 2つのプロンプトやテキストを行単位・単語単位で比較し、Side-by-Side（左右並列）またはUnified（統合）形式で可視化します。前後の空白無視や単語ハイライトの切り替えに対応しています。</li>
+            <li><strong>Document Consistency Checker</strong>: 複数のMarkdown文書を横断して、用語の表記ゆれ、文書間のタスク進捗ステータスの食い違い、標準セクションの欠落、未完了のTODOやチェックリスト項目を検出します。</li>
+            <li><strong>レポート出力</strong>: 各ツールの検査結果や生成文書を、Markdown、HTML、JSON、テキスト形式で保存、またはクリップボードへコピーできます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            文書やリポジトリを作ったあとの確認には、リンクの検査、公開前の点検、引き継ぎ文書の作成、版の比較、表記の統一という作業があります。この5つの作業を、外部通信を行わずにブラウザの中だけで行える形にまとめたものです。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>注意事項・限界</h2>
+          <ul>
+            <li>本ツールの検査は、定義された規則およびパターンに基づく補助的なものです。機密情報の検出漏れや外部URLの到達性を保証するものではありません（外部URLは構文のみを検査します）。</li>
+            <li>GitHub Preflight の本文検査は、ブラウザのフリーズを防ぐため 5MB 以下のファイルに対応しています。</li>
+            <li>動作環境は、Google Chrome / Microsoft Edge / Safari / Firefox の各最新版です。スマートフォンの実機での表示は、確認できていません。</li>
+            <li>本ツールは現状有姿で提供されます。ツールの使用により生じたいかなる損害についても、制作者は責任を負いません。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>データの扱い・外部通信</h2>
+          <p>
+            すべてのファイル読み込み、解析、生成処理はお使いのブラウザ内（ローカルメモリ上）で完結します。選択したファイルや入力したテキストが外部サーバーへ送信されることはありません。外部フォントや外部CDNへの通信も行いません。
+          </p>
+        </section>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/dev-tools-collection/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/dev-tools-collection" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary">note 解説記事</a>
+          </div>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev/n/n6dcc8664c4cf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-08</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
+
