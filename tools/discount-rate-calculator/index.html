@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>割引率らくらく計算 | Zero Dev</title>
+  <meta name="description" content="50%OFFのあとに30%OFFなど、複数の割引を順番に適用したときの支払額と実質割引率を計算します。段階ごとの金額も表示します。外部通信は行いません。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/discount-rate-calculator/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="割引率らくらく計算"
+        data-subtitle="連続割引の支払額と実質割引率を計算"
+        data-description="50%OFFのあとに30%OFFなど、複数の割引を順番に適用したときの支払額と実質割引率を計算します。段階ごとの金額も表示します。外部通信は行いません。"
+        data-category="general"
+        data-image="/assets/tools/discount-rate-calculator.png"
+        data-published="2026-11-08">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">割引率らくらく計算</h1>
+          <p class="tool-subtitle">連続割引の支払額と実質割引率を計算</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/discount-rate-calculator.png" alt="割引率らくらく計算 スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">割引率らくらく計算 - メイン画面（連続割引の計算結果・過程表示）</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/discount-rate-calculator/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/discount-rate-calculator" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            セール価格にクーポンを重ねるなど、割引が2回以上あるときの支払額を知りたい場面で使います。「50%OFFのあとに30%OFFなら、合計80%OFF」とは計算されません。2回目の割引は、1回目の割引後の価格にかかります。このツールは、その計算を段階ごとに表示します。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li>通常価格と、1つ以上の割引率を入力すると、最終支払額・実質割引率・お得になった金額を表示します。</li>
+            <li>割引の段階ごとに、掛け率（<code>× 0.50</code> など）、引かれた金額、割引後の価格を並べて表示します。</li>
+            <li>割引を2つ以上かけたときは、単純に足した割引率と、実質の割引率の違いを表示します。</li>
+            <li>端数処理を「四捨五入」「切り捨て」「切り上げ」から選べます。</li>
+            <li>計算結果のコピーと、入力条件を含むURLの共有ができます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li>計算結果は参考値です。店舗やサイトによって、割引の適用順や端数の扱いが異なることがあります。実際の金額は、各店舗の決済画面で確認してください。</li>
+            <li>税の計算と、ポイント還元の計算はできません。</li>
+            <li>割引率は0〜100の範囲で計算します。範囲外の数値は、0または100として扱います。</li>
+            <li>途中経過の金額は、段階ごとに端数処理して表示します。最終支払額は、小数のまま計算したあとに端数処理します。そのため、途中経過の差し引きと最終支払額が、1円ずれることがあります。</li>
+            <li>入力内容は、お使いのブラウザに保存されます。外部のサーバーには送信しません。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            複数の割引を順番に適用したときの、最終支払額・実質割引率・お得になった金額を計算するために作りました。
+          </p>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-08</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
+
