@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ロト＆ナンバーズ可視化ツール | Zero Dev</title>
+  <meta name="description" content="ロト7・ロト6・ミニロト・ナンバーズ4・ナンバーズ3の過去出目データを構造解析し、頻度分類や出目表、合計値グラフで可視化するWebツールです。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/lotto-numbers-visualization-tool/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="ロト＆ナンバーズ可視化ツール"
+        data-subtitle="過去出目の構造解析と出目表表示"
+        data-description="ロト7・ロト6・ミニロト・ナンバーズ4・ナンバーズ3の過去出目データを構造解析し、頻度分類や出目表、合計値グラフで可視化するWebツールです。"
+        data-category="general"
+        data-image="/assets/tools/lotto-numbers-visualization-tool.png"
+        data-published="2026-11-26">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">ロト＆ナンバーズ可視化ツール</h1>
+          <p class="tool-subtitle">過去出目の構造解析と出目表表示</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/lotto-numbers-visualization-tool.png" alt="ロト＆ナンバーズ可視化ツール スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">ロト＆ナンバーズ可視化ツール - メイン画面（構成指標分析・出現頻度分類・各種設定）</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/lotto-numbers-visualization-tool/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/lotto-numbers-visualization-tool" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            ロト系とナンバーズ系の過去出目データを、1つの画面で見比べたいときに使います。合計値、奇偶比、引っ張り（前回と同じ数字）、スライド（前回の前後1の数字）などの指標をまとめて確認したいときや、過去の任意の回号を基準にして当時の傾向と出目表を振り返りたいときに役立ちます。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li><strong>構成指標と出現頻度の集計</strong>: 奇偶比、合計値、連番、引っ張り、スライド、ナンバーズのパターン型（シングル・ダブル等）と、直近 10〜100 回の出現頻度分類を表示します。</li>
+            <li><strong>出目表マトリクスと絞り込み</strong>: 回号ごとの当選数字を色分けして表示します。ロト系では 10 刻みの数字帯タブで列を絞り込め、PC 表示とスマホ表示を切り替えられます。</li>
+            <li><strong>拡張分析とグラフ</strong>: 前々回からの周辺流入（ロト系）、桁別ヒートマップ（ナンバーズ系）、共起ペア Top 10、未出現スパン上位 15 件、合計値推移グラフを表示します。</li>
+            <li><strong>過去回号の基準切替とレポート出力</strong>: 過去の回号を選んで再計算できます。解析結果は Markdown 形式でクリップボードにコピーできます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li>買い目の自動生成や当選予測を行うツールではありません（過去データの統計・可視化のみ、無保証）。</li>
+            <li>起動時や更新時に抽せん結果データを外部から取得します。通信できない場合は内蔵データ（2026-10-30 抽せん分まで）で表示します。</li>
+            <li>集計回数や基準回号などの設定はブラウザに保存されません。ページを再読み込みすると初期状態に戻ります。</li>
+            <li>未出現スパンランキングカードは上位 15 件までを表示します。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            もともと手元で使っていた Python 版の可視化ツールの機能をブラウザへ移し、ナンバーズ3・4の分析機能と1つの画面に統合するために作りました。
+          </p>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-26</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
