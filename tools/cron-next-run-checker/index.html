@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cron式 次回実行日時チェッカー | Zero Dev</title>
+  <meta name="description" content="5フィールドのcron式の意味を日本語で表示し、基準日時より後の次回実行日時を最大5件確認できるブラウザツールです。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/cron-next-run-checker/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="cron式 次回実行日時チェッカー"
+        data-subtitle="cron-next-run-checker"
+        data-description="5フィールドのcron式の意味を日本語で表示し、基準日時より後の次回実行日時を最大5件確認できるブラウザツールです。"
+        data-category="dev"
+        data-image="/assets/tools/cron-next-run-checker.png"
+        data-published="2026-11-26">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-dev">開発・作業支援ツール</span>
+          </div>
+          <h1 class="tool-title">cron式 次回実行日時チェッカー</h1>
+          <p class="tool-subtitle">cron-next-run-checker</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/cron-next-run-checker.png" alt="cron式 次回実行日時チェッカー スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">cron式 次回実行日時チェッカー - メイン画面（cron 式の日本語解釈と次回実行日時の一覧表示）</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/cron-next-run-checker/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/cron-next-run-checker" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            定期実行の設定に使う cron 式（実行スケジュールを表す5つの数字や記号の並び）は、書いた本人でも次の実行日時を頭の中で追いにくいことがあります。曜日の番号や間隔の指定を取り違えると、意図しない時刻に動いて初めて気づくケースがあります。本ツールは、式を入力欄に入れるだけで日本語の意味と次回の実行日時を確認できます。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li>5フィールドの cron 式（分・時・日・月・曜日）の意味を日本語の一文で表示します。</li>
+            <li>基準日時より後の次回実行日時を最大5件、昇順で一覧表示します。</li>
+            <li>入力欄や基準日時を変更すると、ボタンを押さずにその場で再計算されます。</li>
+            <li>基準日時を変更でき、「現在時刻に戻す」ボタンで現在時刻へ戻せます。</li>
+            <li>式に誤りがある場合は、どのフィールドの何が問題かを日本語で表示します。</li>
+            <li>入力した式はブラウザ内のみで処理し、外部サーバーへ送信しません（保存も行いません）。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li>秒フィールドを含む6フィールド形式、<code>@daily</code> などの別名表記、月や曜日の英字名（<code>JAN</code>・<code>MON</code> など）、単一の値を左辺とする間隔指定（<code>5/15</code> など）には対応していません。</li>
+            <li>計算はお使いのブラウザのローカル時刻で行います。協定世界時（UTC）で動く定期実行環境で試す場合は、時差を読み替えて確認してください（例: 日本時間 9:00 は UTC 0:00）。</li>
+            <li>探索上限は基準日時から50年後の年まで（かつ内部探索反復上限まで）です。一致した日時が5件に満たない場合は、見つかった件数のみ表示します。</li>
+            <li>夏時間（DST）のある地域では、存在しない時刻はスキップされ、重複する時刻は1回だけ表示されます。</li>
+            <li>入力内容は保存されません。ページを再読み込みすると入力は消えます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            定期実行の設定は、毎週のつもりが毎日になっていたり、曜日の番号をずらして指定していたりするミスが起きがちです。設定を本番へ入れる前に、式の意味と実際の実行予定をその場で並べて確認できる単機能の画面があれば役立つと考え、ブラウザだけで動く形にしました。
+          </p>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-26</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
