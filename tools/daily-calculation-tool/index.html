@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日常計算ツール | Zero Dev</title>
+  <meta name="description" content="年齢・日付・期間・時間の4種類の計算を、ひとつのWeb画面で行える静的ツールです。入力データはブラウザ内のみで処理し、外部へ送信しません。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/daily-calculation-tool/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="日常計算ツール"
+        data-subtitle="年齢・日付・期間・時間を1画面で計算"
+        data-description="年齢・日付・期間・時間の4種類の計算を、ひとつのWeb画面で行える静的ツールです。入力データはブラウザ内のみで処理し、外部へ送信しません。"
+        data-category="general"
+        data-image="/assets/tools/daily-calculation-tool.png"
+        data-published="2026-11-27">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">日常計算ツール</h1>
+          <p class="tool-subtitle">年齢・日付・期間・時間を1画面で計算</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/daily-calculation-tool.png" alt="日常計算ツール スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">日常計算ツール - メイン画面（4機能タブ・年齢計算結果の表示例）</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/daily-calculation-tool/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/daily-calculation-tool" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            基準日時点での満年齢を確認したいときや、指定した日数の前後にある日付と曜日を調べたいときに使えます。2つの日付のあいだの総日数や「○年○か月○日」、日付をまたぐ作業や勤務の経過時間を算出したいときにも対応しています。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li><strong>年齢計算</strong>: 生年月日と基準日から、満年齢、経過期間（○年○か月○日）、生まれてからの総日数を算出します。</li>
+            <li><strong>日付計算</strong>: 基準日から指定日数（0〜3,650,000日）の後または前の日付と曜日を算出します。</li>
+            <li><strong>期間計算</strong>: 開始日と終了日の総日数と、暦上の期間（○年○か月○日）を算出します。</li>
+            <li><strong>時間計算</strong>: 開始時刻と終了時刻から経過時間（○時間○分）と合計分数を算出します。「翌日（日付をまたぐ計算）」のチェックで日付をまたぐ計算にも対応します。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li>扱える日付の範囲は <code>0001-01-01</code> から <code>9999-12-31</code> までです。</li>
+            <li>日付計算で指定できる日数は <code>0</code> から <code>3,650,000</code> 日の整数です。</li>
+            <li>時間計算は時と分（<code>HH:mm</code>）の単位です。秒単位の計算には対応していません。</li>
+            <li>年齢と期間の「○年○か月○日」は、開始日から年・月・日の順に終点を超えない最大まで加算し、加算先の月に同じ日がない場合は末日に丸める方式です。平年の2月29日生まれは、2月28日時点で満年齢が加算されます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            年齢、日付、期間、時間の計算は、用途ごとに別の画面やアプリを開く手間が発生します。日常で使う4種類の計算をタブで切り替えられる1つの画面にまとめ、入力データを外部に送信せずブラウザ内だけで完結して使えるように作成しました。
+          </p>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-27</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
