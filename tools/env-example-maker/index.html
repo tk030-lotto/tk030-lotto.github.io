@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>.env テンプレート化ツール | Zero Dev</title>
+  <meta name="description" content=".env の内容を貼り付けるか読み込むと、値を空にしてキーだけを残した .env.example 用のテキストを生成するブラウザツールです。入力は端末内だけで処理し、外部へ送信しません。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/env-example-maker/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title=".env テンプレート化ツール"
+        data-subtitle="env-example-maker"
+        data-description=".env の内容を貼り付けるか読み込むと、値を空にしてキーだけを残した .env.example 用のテキストを生成するブラウザツールです。入力は端末内だけで処理し、外部へ送信しません。"
+        data-category="dev"
+        data-image="/assets/tools/env-example-maker.png"
+        data-published="2026-11-27">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-dev">開発・作業支援ツール</span>
+          </div>
+          <h1 class="tool-title">.env テンプレート化ツール</h1>
+          <p class="tool-subtitle">env-example-maker</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/env-example-maker.png" alt=".env テンプレート化ツール スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">.env テンプレート化ツール - メイン画面（.env の貼り付け・読み込みと .env.example の生成）</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/env-example-maker/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/env-example-maker" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            プロジェクトを公開したり他の人に渡したりするとき、環境変数のキーだけを並べた <code>.env.example</code> を用意することがあります。元の <code>.env</code> から値を1つずつ手作業で消すと、消し忘れが起きやすくなります。このツールは <code>.env</code> の内容を貼り付けるか読み込むことで、キーだけを残して値を空にしたテキストを生成します。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li>テキストの貼り付け、ファイル選択、ドラッグ＆ドロップのいずれでも <code>.env</code> を読み込めます。</li>
+            <li>コメント行（<code>#</code> で始まる行）と空行は、元の位置のまま残します。</li>
+            <li><code>export</code> が付いた行は、<code>export キー=</code> の形のまま変換します。</li>
+            <li>引用符（<code>"</code> または <code>'</code>）で囲まれた複数行の値も、キーだけを残して1行に変換します。</li>
+            <li>変換結果はクリップボードへのコピー、または <code>.env.example</code> としてのダウンロードができます。</li>
+            <li>入力した内容はブラウザの中だけで処理し、外部サーバーへの送信やブラウザへの保存は行いません。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li>コメント行はそのまま残ります。コメントの中に実際の値を書いている場合は、共有前に取り除いてください。</li>
+            <li>値の形式チェックや不要なキーの整理は行いません。同じキーが重複している場合はそのまま残ります。</li>
+            <li>解釈できない行や複数行の値の2行目以降は出力されず、件数だけが表示されます。二重引用符の値が <code>\\"</code> で終わる形など、閉じ引用符を判定できない場合は以降の行が除外されます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            <code>.env</code> を共有用の <code>.env.example</code> に書き換える作業は、プロジェクトを共有するたびに発生します。手作業で値を消すと見落としが起きやすいため、キーを残して値を空にする変換だけを行う単機能のツールとして作りました。入力する <code>.env</code> には秘密の値が含まれるため、外部通信を行わず、ブラウザの中だけで完結して動く形にしています。
+          </p>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-27</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
