@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI開発初心者お助けナビ | Zero Dev</title>
+  <meta name="description" content="困りごとを日常の言葉で検索し、解決手順とAIへの質問文を調べられるWebツールです。50種類の解決策を収録し、通常の操作では外部へ通信しません。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/ai-dev-beginner-navigator/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="AI開発初心者お助けナビ"
+        data-subtitle="AI Dev Beginner Navigator"
+        data-description="困りごとを日常の言葉で検索し、解決手順とAIへの質問文を調べられるWebツールです。50種類の解決策を収録し、通常の操作では外部へ通信しません。"
+        data-category="ai"
+        data-image="/assets/tools/ai-dev-beginner-navigator.png"
+        data-published="2026-11-27">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-ai">AI開発・研究</span>
+          </div>
+          <h1 class="tool-title">AI開発初心者お助けナビ</h1>
+          <p class="tool-subtitle">AI Dev Beginner Navigator</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/ai-dev-beginner-navigator.png" alt="AI開発初心者お助けナビ スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">AI開発初心者お助けナビ - メイン画面（逆引き検索・カテゴリタブ・解決策一覧）</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/ai-dev-beginner-navigator/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/ai-dev-beginner-navigator" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            エラーが出たが、AI への聞き方が分からないとき。ターミナルのコマンドを実行してよいか不安なとき。技術用語に言い換えられない困りごとを、そのままの言葉で調べたいときに使います。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li>「赤い文字が出た」「GitHubに載せたい」のような日常の言葉で、50種類の解決策から探せます。</li>
+            <li>解決策ごとに、「まず知っておくこと」「具体的な解決手順」「注意・やってはいけないこと」を順に読めます。</li>
+            <li>実行環境（OS）と使用言語を選び、AI に送る質問文を作れます。API キーやパスワードの定型パターンは、<code>[REDACTED]</code> に置き換えて警告を表示します。</li>
+            <li>お気に入り、「役に立った／解決しなかった」の記録、利用履歴（最大500件）を、同じブラウザ内に保存できます。履歴は JSON ファイルで書き出し、読み込めます。</li>
+            <li>カテゴリのタブ（エラー解決、AI連携・質問、Git・コマンド、ファイル・環境、開発補助）で絞り込めます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li>コマンドの実行や AI への送信は行いません。質問文の作成までです。実行と送信は、内容を読んだうえで、自分で行ってください。</li>
+            <li>秘密情報のマスクは、定型のパターンだけが対象です。質問文を送る前に、秘密情報が残っていないか、自分の目で確認してください。</li>
+            <li>履歴、お気に入り、評価は、開いた端末とブラウザの中にだけ保存されます。別のブラウザや別の端末には引き継がれません。必要なときは、履歴を書き出して読み込んでください。</li>
+            <li>収録している解決策は50種類です。それ以外の困りごとは、検索結果に出ません。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            AI を使った開発では、困っていることを技術用語に言い換えられないことが、最初の壁になります。この言い換えを、ツールの側で受け持てないかと考えて作りました。「困りごと」から「解決方法」へ、さらに「AI への質問」へと、一続きで進めるようにしています。
+          </p>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-27</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
