@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSV文字化け修復 | Zero Dev</title>
+  <meta name="description" content="CSVの文字コード（UTF-8・Shift-JIS）をブラウザ内で判定し、プレビューで確認して、Shift-JIS または UTF-8 で保存し直せます。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/csv-mojibake-fixer/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="CSV文字化け修復"
+        data-subtitle="CSV Mojibake Fixer"
+        data-description="CSVの文字コード（UTF-8・Shift-JIS）をブラウザ内で判定し、プレビューで確認して、Shift-JIS または UTF-8 で保存し直せます。"
+        data-category="general"
+        data-image="/assets/tools/csv-mojibake-fixer.png"
+        data-published="2026-11-27">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">CSV文字化け修復</h1>
+          <p class="tool-subtitle">CSV Mojibake Fixer</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/csv-mojibake-fixer.png" alt="CSV文字化け修復 スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">CSV文字化け修復 - 読み込み後の文字コード判定と先頭50行プレビュー画面</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/csv-mojibake-fixer/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/csv-mojibake-fixer" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            Windows 日本語版 Excel で CSV ファイルを開いたときに、文字が化けることがあります。UTF-8 と Shift-JIS の間で、文字コードを変えて保存し直したいときにも使えます。ファイルを画面に置くと、文字コードを判定して、先頭 50 行をプレビューに表示します。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li>UTF-8（BOM なし・BOM あり）と Shift-JIS を自動で判定して表示します。</li>
+            <li>先頭 50 行を表形式でプレビューに表示します（保存時は全行・全データを出力します）。</li>
+            <li>「自動判定に戻す」「Shift-JIS (Excel用)」「UTF-8」で、文字コードを手動で切り替えられます。</li>
+            <li>「Shift-JISで保存 (Excel用)」「UTF-8で保存」で、選んだ文字コードの CSV として保存できます。</li>
+            <li>UTF-16（BOM 付き）、解釈できない文字、EUC-JP の可能性があるときは、プレビューの上に警告を表示します。</li>
+            <li>ファイルの内容は外部に送信しません。読み込み・判定・プレビュー・変換は、お使いのブラウザ内で行います。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li>対応する文字コードは UTF-8 と Shift-JIS のみです。UTF-16（BOM 付き）や EUC-JP のファイルは、警告が出ても正しく読み込めません。</li>
+            <li>Shift-JIS で表せない文字（絵文字、波ダッシュ「〜」、マイナス記号「−」、半角円記号「¥」など）は、保存時に確認画面が出ます。承認すると「?」に置き換えて保存し、キャンセルすると保存しません。</li>
+            <li>ファイルサイズは 50 MB まで、プレビューは先頭 50 行までです。プレビュー表の区切り文字はカンマ（<code>,</code>）固定です。</li>
+            <li>Excel 実機での表示確認は未実施です。環境によって、表示が異なる場合があります。</li>
+            <li>本ツールは無保証で提供されます（MIT License）。Microsoft Excel は Microsoft Corporation の商標です。本ツールは Microsoft とは関係のない非公式ツールです。</li>
+          </ul>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-27</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
