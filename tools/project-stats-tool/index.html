@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プロジェクト統計ツール | Zero Dev</title>
+  <meta name="description" content="プロジェクトのフォルダをブラウザ上で走査し、ファイル数・行数・拡張子別の割合・ディレクトリ別の規模を集計します。ファイルは端末内で処理し、外部のサービスへ送信しません。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/project-stats-tool/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="プロジェクト統計ツール"
+        data-subtitle="プロジェクトの行数・言語構成を集計"
+        data-description="プロジェクトのフォルダをブラウザ上で走査し、ファイル数・行数・拡張子別の割合・ディレクトリ別の規模を集計します。ファイルは端末内で処理し、外部のサービスへ送信しません。"
+        data-category="dev"
+        data-image="/assets/tools/project-stats-tool.png"
+        data-published="2026-11-27">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-dev">開発・作業支援ツール</span>
+          </div>
+          <h1 class="tool-title">プロジェクト統計ツール</h1>
+          <p class="tool-subtitle">プロジェクトの行数・言語構成を集計</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/project-stats-tool.png" alt="プロジェクト統計ツール スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">プロジェクト統計ツール - メイン画面（概要サマリー・言語構成比・統計テーブル）</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/project-stats-tool/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/project-stats-tool" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            開発中のプロジェクトや手元のリポジトリについて、総行数とファイル数を把握したいときに使います。どの拡張子やディレクトリが多くを占めるかも、同じ画面で確認します。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li>フォルダを選ぶか、画面にドラッグ＆ドロップして、中のファイルを読み込みます。</li>
+            <li>総行数・コード行・コメント行・空行・ファイル数・ディレクトリ数・容量・平均行数を集計します。</li>
+            <li>拡張子別の表、ディレクトリ別の表、行数順とサイズ順の上位10ファイル、検索と絞り込みができる全ファイル一覧を表示します。</li>
+            <li>結果を Markdown（コピー）、CSV（保存）、JSON（保存）で出力します。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li>行数とコメント行は、行頭の記号を見て判定します。文字列の中にコメントの記号があるときなどは、近い値になる場合があります。</li>
+            <li>ドットで始まる隠しファイル・隠しフォルダと、<code>node_modules</code>・<code>dist</code>・<code>build</code> などは集計しません。10 MB を超えるファイルは読み込まず、件数だけ記録します。</li>
+            <li>フォルダ選択ボタンが使えないブラウザでは、ドラッグ＆ドロップか、標準のフォルダ選択入力を使います。</li>
+            <li>選んだファイルは端末内で処理します。外部のサービスへは通信しません。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            プロジェクトのフォルダをブラウザ上で走査し、コード量・ファイル構成・行数・言語の分布を統計として見られるようにするために作りました。AI を使った開発で、既存のプロジェクトの構造と規模、言語の構成比を把握する場面を想定しています。
+          </p>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-27</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
