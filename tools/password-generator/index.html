@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>パスワード生成ツール | Zero Dev</title>
+  <meta name="description" content="ブラウザ上で暗号論的乱数（Web Crypto API）を使い、4〜64文字のパスワードを生成するツールです。保存・管理機能はなく、外部サーバーへの送信も行いません。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/password-generator/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="パスワード生成ツール"
+        data-subtitle="保存しない、ブラウザ完結のパスワード生成ツール"
+        data-description="ブラウザ上で暗号論的乱数（Web Crypto API）を使い、4〜64文字のパスワードを生成するツールです。保存・管理機能はなく、外部サーバーへの送信も行いません。"
+        data-category="general"
+        data-image="/assets/tools/password-generator.png"
+        data-published="2026-11-28">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">パスワード生成ツール</h1>
+          <p class="tool-subtitle">保存しない、ブラウザ完結のパスワード生成ツール</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/password-generator.png" alt="パスワード生成ツール スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">パスワード生成ツール - メイン画面（パスワード生成・コピー・条件設定）</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/password-generator/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/password-generator" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            Web サービスの登録やパスワード変更のたびに、文字列を自分で考える手間をなくしたいときに使います。パスワードマネージャーに保存せず、その場で文字列を生成してコピーだけを行いたい場面に向いています。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li>ブラウザの暗号論的乱数（Web Crypto API <code>crypto.getRandomValues</code>）を使い、4〜64文字のパスワードを生成できます。</li>
+            <li>「英大文字」「英小文字」「数字」「記号」から使う文字種を選べ、選んだ各文字種から最低1文字が入ります。</li>
+            <li>見分けにくい文字（<code>0 O 1 l I</code>）を除外して生成できます。</li>
+            <li>文字数と選んだ文字種の数から、5段階の強度目安（「非常に弱い」〜「非常に強い」）を確認できます。</li>
+            <li>「コピー」ボタンでクリップボードへコピーでき、自動コピーできない環境では手動コピーの案内が出ます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>操作デモ</h2>
+          <figure class="tool-media">
+            <img src="./assets/demo.gif" alt="パスワード生成ツール 操作デモ" width="960" height="540">
+            <figcaption class="tool-media-caption">確認画面の通過・再生成・文字数と文字種の変更・コピーまでの操作例</figcaption>
+          </figure>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li>パスワードの保存・履歴・管理機能はありません。ブラウザのタブを閉じると生成結果は消去されます。</li>
+            <li>強度表示はエントロピー計算による目安であり、安全性を保証するものではありません。</li>
+            <li>動作確認は Chromium 系ブラウザで行っています（Firefox・Safari 実機での動作は未確認です）。クリップボードへの自動コピーには HTTPS または <code>localhost</code> 環境が必要です。</li>
+            <li>外部サーバーへのパスワード送信やデータ収集は行いません。本ツールは現状有姿（無保証）で提供されます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            パスワードを毎回自分で考える作業は手間がかかります。一方で、生成した文字列をツール側に預けず、管理は自分で行いたい場合もあります。保存や送信の機能を省き、ブラウザ内でパスワードの生成とコピーだけに絞ったツールとして作りました。
+          </p>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-28</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
