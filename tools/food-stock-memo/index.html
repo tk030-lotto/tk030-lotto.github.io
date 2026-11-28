@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>フードストックメモ | Zero Dev</title>
+  <meta name="description" content="写真と期限日だけで家庭内の食品や食材の消費期限・賞味期限を管理するブラウザ向けストックメモツールです。端末内に保存し、外部へ送信しません。">
+  <link rel="canonical" href="https://zero-dev.jp/tools/food-stock-memo/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Zero Dev</a>
+      <nav class="site-nav">
+        <a href="/">HOME</a>
+        <a href="/tools/" class="active">ツール</a>
+        <a href="/consult/">相談・要望</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="tool-detail"
+        data-title="フードストックメモ"
+        data-subtitle="Food Stock Memo"
+        data-description="写真と期限日だけで家庭内の食品や食材の消費期限・賞味期限を管理するブラウザ向けストックメモツールです。端末内に保存し、外部へ送信しません。"
+        data-category="general"
+        data-image="/assets/tools/food-stock-memo.png"
+        data-published="2026-11-28">
+
+        <header class="tool-detail-header">
+          <div class="tool-meta-badge-row">
+            <span class="badge badge-general">一般向けツール</span>
+          </div>
+          <h1 class="tool-title">フードストックメモ</h1>
+          <p class="tool-subtitle">Food Stock Memo</p>
+        </header>
+
+        <figure class="tool-media">
+          <img src="/assets/tools/food-stock-memo.png" alt="フードストックメモ スクリーンショット" width="1280" height="720">
+          <figcaption class="tool-media-caption">フードストックメモ - メイン画面（一覧表示・期限フィルター・使い切り操作）</figcaption>
+        </figure>
+
+        <section class="tool-actions-box">
+          <h2>ツールを利用する / コードを見る</h2>
+          <div class="btn-group">
+            <a href="https://zero-dev.jp/food-stock-memo/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">ツールを開く（Web版）</a>
+            <a href="https://github.com/tk030-lotto/food-stock-memo" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub リポジトリ</a>
+            <a href="#" class="btn btn-secondary" aria-disabled="true" tabindex="-1" style="opacity: 0.45; pointer-events: none; cursor: not-allowed; color: var(--text-muted); border-color: var(--border-color);">note 解説記事（準備中）</a>
+          </div>
+        </section>
+
+        <section class="tool-section">
+          <h2>こんなときに</h2>
+          <p>
+            冷蔵庫や食品棚に入れた食材の消費期限・賞味期限を忘れることがあります。商品名やバーコードを入力せず、写真と期限日だけで手早く記録しておきたいときに使うツールです。「今日・明日」や「7日以内」など、期限が近い食品だけを一覧で確認できます。
+          </p>
+        </section>
+
+        <section class="tool-section">
+          <h2>できること</h2>
+          <ul>
+            <li><strong>写真と期限日の登録</strong>: 「カメラで撮影」または「画像を選択」から写真を選び、期限種別（消費期限／賞味期限）と期限日を登録します。「今日」「明日」「+3日」「+1週間」「+2週間」「+1ヶ月」のボタンで日付を入力できます。必要なら食品名とメモも残せます。</li>
+            <li><strong>期限順の一覧と絞り込み</strong>: 登録した食品を期限が近い順に並べ、「すべて」「期限切れ」「今日・明日」「7日以内」のボタンで絞り込めます。</li>
+            <li><strong>詳細確認と編集</strong>: カードの写真を押すと詳細画面が開き、写真・食品名・期限種別・期限日・メモを後から変更できます。</li>
+            <li><strong>使い切り削除</strong>: 「使い切った」を押して確認画面で確定すると、一覧と保存領域から削除されます。</li>
+            <li><strong>端末内保存とオフライン起動</strong>: データはブラウザ内の保存領域（IndexedDB）に保存され、外部へ送信しません。一度開くとオフラインでも起動できます。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>向かないこと・注意</h2>
+          <ul>
+            <li><strong>端末間の同期とバックアップはありません</strong>: データはお使いのブラウザ内にのみ保存されます。別の端末との自動同期やクラウド保存には対応していません。ブラウザのデータ削除を行うと記録と写真は消去されます。</li>
+            <li><strong>期限の通知機能はありません</strong>: 期限日が近づいてもプッシュ通知やアラームは鳴りません。画面を開いて一覧で確認する使い方になります。</li>
+            <li><strong>元画像の解像度のまま保存しません</strong>: 保存容量を抑えるため、写真は長辺最大 800px（圧縮失敗時は 480px）に縮小して保存します。</li>
+          </ul>
+        </section>
+
+        <section class="tool-section">
+          <h2>なぜ作ったか</h2>
+          <p>
+            家庭内の食品管理では、商品名やバーコードを毎回入力する仕組みだと記録が続かないことがあります。そこで「買った食品を忘れない」「期限を忘れない」「使ったら消す」に用途を絞り、写真と期限日だけで記録できる個人向けツールとして作成しました。アカウント登録や外部サーバーを使わず、ブラウザだけで完結して使える形にしています。
+          </p>
+        </section>
+
+        <section class="support-box">
+          <h2>開発支援（サポート）</h2>
+          <p>
+            Zero Dev は個人でツールの設計・開発・運営を行っています。ツールが役に立った際のご支援や、活動を応援していただける方は、以下のリンクよりサポートいただけますと幸いです。
+          </p>
+          <div class="btn-group">
+            <a href="https://note.com/zero_ai_dev" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">note で支援する</a>
+            <a href="https://github.com/sponsors/tk030-lotto" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+          </div>
+        </section>
+
+        <footer class="tool-meta-info">
+          <span>ライセンス: MIT License</span>
+          <span>公開日: 2026-11-28</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <a href="https://github.com/tk030-lotto">GitHub</a>
+        <span class="footer-divider">·</span>
+        <a href="https://note.com/zero_ai_dev" target="_blank" rel="noopener noreferrer">note</a>
+        <span class="footer-divider">·</span>
+        <a href="https://zero-dev.jp/my-tools/">My Tools</a>
+        <span class="footer-divider">·</span>
+        <a href="/about/">運営者情報</a>
+        <span class="footer-divider">·</span>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <span class="footer-divider">·</span>
+        <a href="/disclaimer/">免責事項</a>
+      </nav>
+      <p class="footer-copyright">© 2026 Zero Dev</p>
+    </div>
+  </footer>
+</body>
+</html>
